@@ -13,7 +13,7 @@ struct TypeBadgeView: View {
     var body: some View {
         
         HStack {
-            Text(type.rawValue)
+            Text(type.rawValue.uppercased())
                     .font(.caption)
                     .fontWeight(.black)
                     .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))

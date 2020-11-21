@@ -17,6 +17,7 @@
 		CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7992567721E00981380 /* UIColor+Hex.swift */; };
 		CA0EB7A42567728F00981380 /* TypeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7A32567728F00981380 /* TypeCalculatorView.swift */; };
 		CA0EB7AC256775BD00981380 /* TypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7AB256775BD00981380 /* TypeSection.swift */; };
+		CAA3C30A2569978800C70F4E /* TypeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3C3092569978800C70F4E /* TypeButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CA0EB7992567721E00981380 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		CA0EB7A32567728F00981380 /* TypeCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCalculatorView.swift; sourceTree = "<group>"; };
 		CA0EB7AB256775BD00981380 /* TypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSection.swift; sourceTree = "<group>"; };
+		CAA3C3092569978800C70F4E /* TypeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				CA0EB78B256771BE00981380 /* TypeBadgeView.swift */,
+				CAA3C3092569978800C70F4E /* TypeButtonView.swift */,
 			);
 			path = ComponentView;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				CA0EB7AC256775BD00981380 /* TypeSection.swift in Sources */,
 				CA0EB75A2567714700981380 /* PokeTypeCalculatorApp.swift in Sources */,
 				CA0EB78C256771BE00981380 /* TypeBadgeView.swift in Sources */,
+				CAA3C30A2569978800C70F4E /* TypeButtonView.swift in Sources */,
 				CA0EB794256771DB00981380 /* Type.swift in Sources */,
 				CA0EB7A42567728F00981380 /* TypeCalculatorView.swift in Sources */,
 				CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */,

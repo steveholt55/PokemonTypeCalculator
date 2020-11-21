@@ -8,7 +8,17 @@
 import Foundation
 import SwiftUI
 
-enum Type: String, Decodable {
+class TypeHolder: ObservableObject {
+    @Published var type: Type? = nil
+    
+    static var mockType: TypeHolder = {
+        let holder = TypeHolder()
+        holder.type = .grass
+        return holder
+    }()
+}
+
+enum Type: String, CaseIterable {
     case bug
     case dark
     case dragon
@@ -87,4 +97,5 @@ extension Type: Identifiable {
     }
     
 }
+
 
