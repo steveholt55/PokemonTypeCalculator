@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct TypeBadgeView: View {
+    let type: Type
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        HStack {
+            Text(type.rawValue)
+                    .font(.caption)
+                    .fontWeight(.black)
+                    .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+                    .foregroundColor(.white)
+        }
+        .background(type.color)
+        .cornerRadius(4.0)
+
     }
 }
 
 struct TypeBadgeView_Previews: PreviewProvider {
     static var previews: some View {
-        TypeBadgeView()
+        let type: Type = .grass
+        TypeBadgeView(type: type)
     }
 }
+

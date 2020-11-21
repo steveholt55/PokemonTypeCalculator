@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		CA0EB75A2567714700981380 /* PokeTypeCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7592567714700981380 /* PokeTypeCalculatorApp.swift */; };
-		CA0EB75C2567714700981380 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB75B2567714700981380 /* ContentView.swift */; };
 		CA0EB75E2567714D00981380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0EB75D2567714D00981380 /* Assets.xcassets */; };
 		CA0EB7612567714D00981380 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0EB7602567714D00981380 /* Preview Assets.xcassets */; };
 		CA0EB76C2567714D00981380 /* PokeTypeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB76B2567714D00981380 /* PokeTypeCalculatorTests.swift */; };
 		CA0EB7772567714D00981380 /* PokeTypeCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7762567714D00981380 /* PokeTypeCalculatorUITests.swift */; };
+		CA0EB78C256771BE00981380 /* TypeBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB78B256771BE00981380 /* TypeBadgeView.swift */; };
+		CA0EB794256771DB00981380 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB793256771DB00981380 /* Type.swift */; };
+		CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7992567721E00981380 /* UIColor+Hex.swift */; };
+		CA0EB79F2567724100981380 /* PokeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB79E2567724100981380 /* PokeColor.swift */; };
+		CA0EB7A42567728F00981380 /* TypeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7A32567728F00981380 /* TypeCalculatorView.swift */; };
+		CA0EB7AC256775BD00981380 /* TypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7AB256775BD00981380 /* TypeSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +40,6 @@
 /* Begin PBXFileReference section */
 		CA0EB7562567714700981380 /* PokeTypeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeTypeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0EB7592567714700981380 /* PokeTypeCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeTypeCalculatorApp.swift; sourceTree = "<group>"; };
-		CA0EB75B2567714700981380 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA0EB75D2567714D00981380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0EB7602567714D00981380 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA0EB7622567714D00981380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +49,12 @@
 		CA0EB7722567714D00981380 /* PokeTypeCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeTypeCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0EB7762567714D00981380 /* PokeTypeCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeTypeCalculatorUITests.swift; sourceTree = "<group>"; };
 		CA0EB7782567714D00981380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0EB78B256771BE00981380 /* TypeBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeBadgeView.swift; sourceTree = "<group>"; };
+		CA0EB793256771DB00981380 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		CA0EB7992567721E00981380 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		CA0EB79E2567724100981380 /* PokeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeColor.swift; sourceTree = "<group>"; };
+		CA0EB7A32567728F00981380 /* TypeCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCalculatorView.swift; sourceTree = "<group>"; };
+		CA0EB7AB256775BD00981380 /* TypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +105,15 @@
 		CA0EB7582567714700981380 /* PokeTypeCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				CA0EB7592567714700981380 /* PokeTypeCalculatorApp.swift */,
-				CA0EB75B2567714700981380 /* ContentView.swift */,
 				CA0EB75D2567714D00981380 /* Assets.xcassets */,
+				CA0EB789256771AE00981380 /* ComponentView */,
 				CA0EB7622567714D00981380 /* Info.plist */,
+				CA0EB787256771AE00981380 /* Model */,
+				CA0EB7592567714700981380 /* PokeTypeCalculatorApp.swift */,
 				CA0EB75F2567714D00981380 /* Preview Content */,
+				CA0EB798256771F600981380 /* Util */,
+				CA0EB78A256771AE00981380 /* View */,
+				CA0EB788256771AE00981380 /* ViewController */,
 			);
 			path = PokeTypeCalculator;
 			sourceTree = "<group>";
@@ -128,6 +142,47 @@
 				CA0EB7782567714D00981380 /* Info.plist */,
 			);
 			path = PokeTypeCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		CA0EB787256771AE00981380 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA0EB793256771DB00981380 /* Type.swift */,
+				CA0EB7AB256775BD00981380 /* TypeSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA0EB788256771AE00981380 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CA0EB789256771AE00981380 /* ComponentView */ = {
+			isa = PBXGroup;
+			children = (
+				CA0EB78B256771BE00981380 /* TypeBadgeView.swift */,
+			);
+			path = ComponentView;
+			sourceTree = "<group>";
+		};
+		CA0EB78A256771AE00981380 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA0EB7A32567728F00981380 /* TypeCalculatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA0EB798256771F600981380 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CA0EB7992567721E00981380 /* UIColor+Hex.swift */,
+				CA0EB79E2567724100981380 /* PokeColor.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA0EB75C2567714700981380 /* ContentView.swift in Sources */,
+				CA0EB7AC256775BD00981380 /* TypeSection.swift in Sources */,
 				CA0EB75A2567714700981380 /* PokeTypeCalculatorApp.swift in Sources */,
+				CA0EB79F2567724100981380 /* PokeColor.swift in Sources */,
+				CA0EB78C256771BE00981380 /* TypeBadgeView.swift in Sources */,
+				CA0EB794256771DB00981380 /* Type.swift in Sources */,
+				CA0EB7A42567728F00981380 /* TypeCalculatorView.swift in Sources */,
+				CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

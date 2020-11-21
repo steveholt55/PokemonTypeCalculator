@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct TypeSection: Identifiable {
+    var id: String {
+        return name
+    }
+    let name: String
+    let types: [Type]
+}
