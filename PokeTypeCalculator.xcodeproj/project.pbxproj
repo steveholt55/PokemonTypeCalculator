@@ -18,6 +18,7 @@
 		CA0EB7A42567728F00981380 /* TypeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7A32567728F00981380 /* TypeCalculatorView.swift */; };
 		CA0EB7AC256775BD00981380 /* TypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7AB256775BD00981380 /* TypeSection.swift */; };
 		CAA3C30A2569978800C70F4E /* TypeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3C3092569978800C70F4E /* TypeButtonView.swift */; };
+		CAA3C30F2569C4E900C70F4E /* DamageRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3C30E2569C4E900C70F4E /* DamageRelation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CA0EB7A32567728F00981380 /* TypeCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCalculatorView.swift; sourceTree = "<group>"; };
 		CA0EB7AB256775BD00981380 /* TypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSection.swift; sourceTree = "<group>"; };
 		CAA3C3092569978800C70F4E /* TypeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeButtonView.swift; sourceTree = "<group>"; };
+		CAA3C30E2569C4E900C70F4E /* DamageRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageRelation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				CA0EB793256771DB00981380 /* Type.swift */,
 				CA0EB7AB256775BD00981380 /* TypeSection.swift */,
+				CAA3C30E2569C4E900C70F4E /* DamageRelation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				CA0EB75A2567714700981380 /* PokeTypeCalculatorApp.swift in Sources */,
 				CA0EB78C256771BE00981380 /* TypeBadgeView.swift in Sources */,
 				CAA3C30A2569978800C70F4E /* TypeButtonView.swift in Sources */,
+				CAA3C30F2569C4E900C70F4E /* DamageRelation.swift in Sources */,
 				CA0EB794256771DB00981380 /* Type.swift in Sources */,
 				CA0EB7A42567728F00981380 /* TypeCalculatorView.swift in Sources */,
 				CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */,

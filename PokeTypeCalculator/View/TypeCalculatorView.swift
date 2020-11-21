@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TypeCalculatorView: View {
     
@@ -46,15 +47,20 @@ struct TypeCalculatorView: View {
                 }
             }.padding(8)
             
-            List {
-                ForEach(sections) { section in
-                    Section(header: Text(section.name)) {
-                        ForEach(section.types) { type in
-                            TypeBadgeView(type: type)
+            
+                
+            if let damageRelation = primaryType.type?.damageRelation.sections {
+                List {
+                    ForEach(damageRelation) { section in
+                        Section(header: Text(section.name)) {
+                            ForEach(section.types) { type in
+                                TypeBadgeView(type: type)
+                            }
                         }
                     }
                 }
             }
+            
             
             Spacer()
         }
