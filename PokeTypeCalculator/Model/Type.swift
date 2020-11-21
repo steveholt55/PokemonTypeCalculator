@@ -31,44 +31,50 @@ enum Type: String, Decodable {
     // MARK: - Color
     
     var color: Color {
+        let hexString: String
         switch self {
         case .bug:
-            return PokeColor.bugType
+            hexString = "A8B820"
         case .dark:
-            return PokeColor.darkType
+            hexString = "705746"
         case .dragon:
-            return PokeColor.dragonType
+            hexString = "6F35FC"
         case .electric:
-            return PokeColor.electricType
+            hexString = "F7D02C"
         case .fairy:
-            return PokeColor.fairyType
+            hexString = "D685AD"
         case .fighting:
-            return PokeColor.fightingType
+            hexString = "C22E28"
         case .fire:
-            return PokeColor.fireType
+            hexString = "EE8130"
         case .flying:
-            return PokeColor.flyingType
+            hexString = "A98FF3"
         case .ghost:
-            return PokeColor.ghostType
+            hexString = "735797"
         case .grass:
-            return PokeColor.grassType
+            hexString = "7AC74C"
         case .ground:
-            return PokeColor.groundType
+            hexString = "E2BF65"
         case .ice:
-            return PokeColor.iceType
+            hexString = "96D9D6"
         case .normal:
-            return PokeColor.normalType
+            hexString = "A8A77A"
         case .poison:
-            return PokeColor.poisonType
+            hexString = "A33EA1"
         case .psychic:
-            return PokeColor.psychicType
+            hexString = "F95587"
         case .rock:
-            return PokeColor.rockType
+            hexString = "B6A136"
         case .steel:
-            return PokeColor.steelType
+            hexString = "B7B7CE"
         case .water:
-            return PokeColor.waterType
+            hexString = "6390F0"
         }
+        
+        guard let uicolor = UIColor(hexString: "#\(hexString)") else {
+            fatalError("Bad Hex Color")
+        }
+        return Color(uicolor)
     }
     
 }

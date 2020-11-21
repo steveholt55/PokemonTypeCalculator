@@ -15,7 +15,6 @@
 		CA0EB78C256771BE00981380 /* TypeBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB78B256771BE00981380 /* TypeBadgeView.swift */; };
 		CA0EB794256771DB00981380 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB793256771DB00981380 /* Type.swift */; };
 		CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7992567721E00981380 /* UIColor+Hex.swift */; };
-		CA0EB79F2567724100981380 /* PokeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB79E2567724100981380 /* PokeColor.swift */; };
 		CA0EB7A42567728F00981380 /* TypeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7A32567728F00981380 /* TypeCalculatorView.swift */; };
 		CA0EB7AC256775BD00981380 /* TypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7AB256775BD00981380 /* TypeSection.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		CA0EB78B256771BE00981380 /* TypeBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeBadgeView.swift; sourceTree = "<group>"; };
 		CA0EB793256771DB00981380 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		CA0EB7992567721E00981380 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		CA0EB79E2567724100981380 /* PokeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeColor.swift; sourceTree = "<group>"; };
 		CA0EB7A32567728F00981380 /* TypeCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCalculatorView.swift; sourceTree = "<group>"; };
 		CA0EB7AB256775BD00981380 /* TypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				CA0EB7992567721E00981380 /* UIColor+Hex.swift */,
-				CA0EB79E2567724100981380 /* PokeColor.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -316,7 +313,6 @@
 			files = (
 				CA0EB7AC256775BD00981380 /* TypeSection.swift in Sources */,
 				CA0EB75A2567714700981380 /* PokeTypeCalculatorApp.swift in Sources */,
-				CA0EB79F2567724100981380 /* PokeColor.swift in Sources */,
 				CA0EB78C256771BE00981380 /* TypeBadgeView.swift in Sources */,
 				CA0EB794256771DB00981380 /* Type.swift in Sources */,
 				CA0EB7A42567728F00981380 /* TypeCalculatorView.swift in Sources */,
