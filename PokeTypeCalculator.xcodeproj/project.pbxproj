@@ -19,6 +19,7 @@
 		CA0EB7AC256775BD00981380 /* TypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7AB256775BD00981380 /* TypeSection.swift */; };
 		CAA3C30A2569978800C70F4E /* TypeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3C3092569978800C70F4E /* TypeButtonView.swift */; };
 		CAA3C30F2569C4E900C70F4E /* DamageRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3C30E2569C4E900C70F4E /* DamageRelation.swift */; };
+		CAA8E91D256A0B8800A4F7C1 /* DamageRelationCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8E91C256A0B8800A4F7C1 /* DamageRelationCalculation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CA0EB7AB256775BD00981380 /* TypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSection.swift; sourceTree = "<group>"; };
 		CAA3C3092569978800C70F4E /* TypeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeButtonView.swift; sourceTree = "<group>"; };
 		CAA3C30E2569C4E900C70F4E /* DamageRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageRelation.swift; sourceTree = "<group>"; };
+		CAA8E91C256A0B8800A4F7C1 /* DamageRelationCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageRelationCalculation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				CA0EB793256771DB00981380 /* Type.swift */,
 				CA0EB7AB256775BD00981380 /* TypeSection.swift */,
 				CAA3C30E2569C4E900C70F4E /* DamageRelation.swift */,
+				CAA8E91C256A0B8800A4F7C1 /* DamageRelationCalculation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				CA0EB7AC256775BD00981380 /* TypeSection.swift in Sources */,
 				CA0EB75A2567714700981380 /* PokeTypeCalculatorApp.swift in Sources */,
+				CAA8E91D256A0B8800A4F7C1 /* DamageRelationCalculation.swift in Sources */,
 				CA0EB78C256771BE00981380 /* TypeBadgeView.swift in Sources */,
 				CAA3C30A2569978800C70F4E /* TypeButtonView.swift in Sources */,
 				CAA3C30F2569C4E900C70F4E /* DamageRelation.swift in Sources */,

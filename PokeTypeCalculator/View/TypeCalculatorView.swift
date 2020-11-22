@@ -16,15 +16,8 @@ struct TypeCalculatorView: View {
     @State private var showingPrimaryTypeSelection = false
     @State private var showingSecondaryTypeSelection = false
     
-    @State private var sections: [TypeSection] = [
-        TypeSection(name: "Super Effective", types: [.grass]),
-        TypeSection(name: "Normal", types: [.ghost])
-    ]
-    
-    @State private var types: [Type] = [.grass]
-    @State private var normalTypes: [Type] = [.fire, .water]
-    
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    
     var body: some View {
         
         VStack {
@@ -48,9 +41,11 @@ struct TypeCalculatorView: View {
                 }
             }.padding(8)
             
-            if let damageRelation = primaryType.type?.damageRelation.sections {
+            if let damageRelation = primaryType.type?.damageRelation {
+                let calculation = DamageRelationCalculation(primaryType: damageRelation, secondaryType: secondaryType.type?.damageRelation)
+                
                 List {
-                    ForEach(damageRelation) { section in
+                    ForEach(calculation.sections) { section in
                         Section(header: Text(section.name)) {
                             ScrollView {
                                 LazyVGrid(columns: gridItemLayout, spacing: 8) {
