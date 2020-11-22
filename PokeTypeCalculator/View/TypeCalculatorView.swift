@@ -10,8 +10,8 @@ import Combine
 
 struct TypeCalculatorView: View {
     
-    @ObservedObject private var primaryType: TypeHolder = TypeHolder()
-    @ObservedObject private var secondaryType: TypeHolder = TypeHolder()
+    @ObservedObject var primaryType: TypeHolder = TypeHolder()
+    @ObservedObject var secondaryType: TypeHolder = TypeHolder()
     
     @State private var showingPrimaryTypeSelection = false
     @State private var showingSecondaryTypeSelection = false
@@ -24,6 +24,7 @@ struct TypeCalculatorView: View {
     @State private var types: [Type] = [.grass]
     @State private var normalTypes: [Type] = [.fire, .water]
     
+    private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
         
         VStack {
@@ -47,20 +48,21 @@ struct TypeCalculatorView: View {
                 }
             }.padding(8)
             
-            
-                
             if let damageRelation = primaryType.type?.damageRelation.sections {
                 List {
                     ForEach(damageRelation) { section in
                         Section(header: Text(section.name)) {
-                            ForEach(section.types) { type in
-                                TypeBadgeView(type: type)
+                            ScrollView {
+                                LazyVGrid(columns: gridItemLayout, spacing: 8) {
+                                    ForEach(section.types) { type in
+                                        TypeBadgeView(type: type)
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
-            
             
             Spacer()
         }
@@ -93,6 +95,9 @@ struct TypeCalculatorView: View {
 
 struct TypeCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        TypeCalculatorView()
+        let holder = TypeHolder.mockType
+        let view = TypeCalculatorView()
+        view.primaryType.type = holder.type
+        return view
     }
 }
