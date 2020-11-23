@@ -9,15 +9,28 @@ import SwiftUI
 
 struct SearchListView: View {
     
+    @State var searchText: String = ""
+    
     @ObservedObject var viewModel = SearchListViewModel()
     
+    @Environment(\.presentationMode) var presentation
+    @EnvironmentObject var holder: PokemonHolder
+    
     var body: some View {
-        List(viewModel.list) { item in
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(item.name.capitalized)
-                        .font(.headline)
-                }
+        VStack {
+            
+            SearchBarView(text: $searchText)
+                .padding(.top, 8)
+            
+            let filteredItems = viewModel.list.filter { searchText.isEmpty ? true : $0.name.lowercased().contains(searchText.lowercased())
+            }
+            
+            List(filteredItems) { item in
+                Text(item.name.capitalized).font(.headline)
+                    .onTapGesture {
+                        self.holder.name = item.name
+                        self.presentation.wrappedValue.dismiss()
+                    }
             }
         }
     }

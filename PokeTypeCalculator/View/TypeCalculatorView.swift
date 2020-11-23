@@ -10,11 +10,15 @@ import Combine
 
 struct TypeCalculatorView: View {
     
-    @ObservedObject var primaryType: TypeHolder = TypeHolder()
-    @ObservedObject var secondaryType: TypeHolder = TypeHolder()
-    
+    // Type Selection
     @State private var showingPrimaryTypeSelection = false
     @State private var showingSecondaryTypeSelection = false
+    
+    // Search
+    @ObservedObject var holder: PokemonHolder = PokemonHolder()
+    @State private var showingSearchView = false
+    
+    @State private var isLoadingPokemon = true
     
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     
@@ -22,8 +26,22 @@ struct TypeCalculatorView: View {
         
         VStack {
             
+            Button(action: {
+                self.showingSearchView.toggle()
+            }) {
+                if let selectedName = holder.name {
+                    Text(selectedName.capitalized)
+                } else {
+                    Text("Search Pokemon")
+                }
+            }.sheet(isPresented: $showingSearchView) {
+                SearchListView()
+                    .environmentObject(holder)
+            }
+            
             HStack {
-                TypeButtonView(type: primaryType).onTapGesture {
+                
+                TypeButtonView(type: self.holder.primaryType).onTapGesture {
                     self.showingPrimaryTypeSelection = true
                 }
                 .actionSheet(isPresented: $showingPrimaryTypeSelection, content: {
@@ -31,8 +49,8 @@ struct TypeCalculatorView: View {
                 })
                 
                 // Only show type 2 option if type 1 is set
-                if primaryType.type != nil {
-                    TypeButtonView(type: secondaryType).onTapGesture {
+                if self.holder.primaryType.type != nil {
+                    TypeButtonView(type: self.holder.secondaryType).onTapGesture {
                         self.showingSecondaryTypeSelection = true
                     }
                     .actionSheet(isPresented: $showingSecondaryTypeSelection, content: {
@@ -41,8 +59,8 @@ struct TypeCalculatorView: View {
                 }
             }.padding(8)
             
-            if let damageRelation = primaryType.type?.damageRelation {
-                let calculation = DamageRelationCalculation(primaryType: damageRelation, secondaryType: secondaryType.type?.damageRelation)
+            if let damageRelation = self.holder.primaryType.type?.damageRelation {
+                let calculation = DamageRelationCalculation(primaryType: damageRelation, secondaryType: self.holder.secondaryType.type?.damageRelation)
                 
                 List {
                     ForEach(calculation.sections) { section in
@@ -59,7 +77,11 @@ struct TypeCalculatorView: View {
                 }
             }
             
-            Spacer()
+            if isLoadingPokemon {
+                
+            } else {
+                Spacer()
+            }
         }
     }
     
@@ -69,16 +91,16 @@ struct TypeCalculatorView: View {
         let buttons: [ActionSheet.Button] = Type.allCases.compactMap {type in
             
             // Make sure we can't have primary and secondary types be the same
-            if !isPrimary && primaryType.type == type {
+            if !isPrimary && self.holder.primaryType.type == type {
                 return nil
             }
             
             // Create a default button of the type
             return .default(Text(type.rawValue.uppercased())) {
                 if isPrimary {
-                    self.primaryType.type = type
+                    self.holder.primaryType.type = type
                 } else {
-                    self.secondaryType.type = type
+                    self.holder.secondaryType.type = type
                 }
                 
             }
@@ -92,7 +114,7 @@ struct TypeCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         let holder = TypeHolder.mockType
         let view = TypeCalculatorView()
-        view.primaryType.type = holder.type
+        view.holder.primaryType.type = holder.type
         return view
     }
 }

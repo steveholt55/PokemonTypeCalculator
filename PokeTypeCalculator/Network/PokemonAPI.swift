@@ -32,11 +32,11 @@ extension PokemonAPI {
             .eraseToAnyPublisher()
     }
     
-    static func getPokemon(_ name: String) -> AnyPublisher<ListResponse, Error> {
+    static func getPokemon(_ name: String) -> AnyPublisher<Pokemon, Error> {
         
         guard var components = URLComponents(url: baseUrl.appendingPathComponent(APIPath.pokemon.rawValue), resolvingAgainstBaseURL: true)
             else { fatalError("Couldn't create URLComponents") }
-        components.path.append("\(name)")
+        components.path.append("/\(name)")
         
         let request = URLRequest(url: components.url!)
         

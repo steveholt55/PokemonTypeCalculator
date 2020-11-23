@@ -21,7 +21,6 @@ class SearchListViewModel: ObservableObject {
 
 extension SearchListViewModel {
     
-    // Subscriber implementation
     func getList() {
         cancellationToken = PokemonAPI.getList()
             .mapError({ (error) -> Error in
