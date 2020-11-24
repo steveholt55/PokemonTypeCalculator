@@ -17,7 +17,10 @@ class PokemonHolder: ObservableObject {
     var name: String? {
         didSet {
             if let name = name {
+                // TODO make this cleaner
                 self.pokemon = nil
+                self.primaryType.type = nil
+                self.secondaryType.type = nil
                 self.getPokemon(name)
             }
         }
