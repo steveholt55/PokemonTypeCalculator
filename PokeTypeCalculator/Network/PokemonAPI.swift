@@ -44,4 +44,5 @@ extension PokemonAPI {
             .map(\.value)
             .eraseToAnyPublisher()
     }
+    
 }

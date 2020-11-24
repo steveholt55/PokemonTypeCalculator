@@ -11,20 +11,23 @@ import SwiftUI
 struct TypeButtonView: View {
     
     @ObservedObject var type: TypeHolder
+    var allowSelection: Bool = false
     
     var body: some View {
         if let type = type.type {
             TypeBadgeView(type: type)
         } else {
-            HStack {
-                Text("Select")
-                        .font(.caption)
-                        .fontWeight(.black)
-                        .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                        .foregroundColor(Color(UIColor.secondaryLabel))
+            if allowSelection {
+                HStack {
+                    Text("Select")
+                            .font(.caption)
+                            .fontWeight(.black)
+                            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+                            .foregroundColor(Color(UIColor.secondaryLabel))
+                }
+                .background(Color(UIColor.secondarySystemBackground))
+                .cornerRadius(4.0)
             }
-            .background(Color(UIColor.secondarySystemBackground))
-            .cornerRadius(4.0)
         }
     }
 }

@@ -16,7 +16,6 @@ struct TypeCalculatorView: View {
     
     // Search
     @ObservedObject var holder: PokemonHolder = PokemonHolder()
-    @State private var showingSearchView = false
     
     @State private var isLoadingPokemon = true
     
@@ -25,47 +24,9 @@ struct TypeCalculatorView: View {
     var body: some View {
         
         VStack {
+            PokemonSelectionView(holder: self.holder)
             
-            Button(action: {
-                self.showingSearchView.toggle()
-            }) {
-                VStack {
-                    if let selectedName = holder.name {
-                        Text(selectedName.capitalized)
-                        if let sprite1 = holder.pokemon?.sprites.frontDefault {
-                            PokemonImageView(url: sprite1)
-                        }
-                        if let sprite2 = holder.pokemon?.sprites.frontShiny {
-                            PokemonImageView(url: sprite2)
-                        }
-                    } else {
-                        Text("Search Pokemon")
-                    }
-                }
-            }.sheet(isPresented: $showingSearchView) {
-                SearchListView()
-                    .environmentObject(holder)
-            }
-            
-            HStack {
-                
-                TypeButtonView(type: self.holder.primaryType).onTapGesture {
-                    self.showingPrimaryTypeSelection = true
-                }
-                .actionSheet(isPresented: $showingPrimaryTypeSelection, content: {
-                    typeSelectionActionSheet(isPrimary: true)
-                })
-                
-                // Only show type 2 option if type 1 is set
-                if self.holder.primaryType.type != nil {
-                    TypeButtonView(type: self.holder.secondaryType).onTapGesture {
-                        self.showingSecondaryTypeSelection = true
-                    }
-                    .actionSheet(isPresented: $showingSecondaryTypeSelection, content: {
-                        typeSelectionActionSheet(isPrimary: false)
-                    })
-                }
-            }.padding(8)
+            PokemonHolderView(holder: self.holder)
             
             if let damageRelation = self.holder.primaryType.type?.damageRelation {
                 let calculation = DamageRelationCalculation(primaryType: damageRelation, secondaryType: self.holder.secondaryType.type?.damageRelation)
@@ -90,9 +51,14 @@ struct TypeCalculatorView: View {
             } else {
                 Spacer()
             }
-        }
+        }.onAppear(perform: {
+            loadRandomPokemon()
+        })
     }
     
+    private func loadRandomPokemon() {
+        self.holder.getRandomPokemon()
+    }
     
     func typeSelectionActionSheet(isPrimary: Bool) -> ActionSheet {
         

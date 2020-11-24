@@ -261,8 +261,8 @@ extension Type {
     func psychicDamageRelation() -> DamageRelation {
         
         let immune: Set<Type> = []
-        let resistant: Set<Type> = []
-        let weak: Set<Type> = []
+        let resistant: Set<Type> = [.fighting, .psychic]
+        let weak: Set<Type> = [.bug, .ghost, .dark]
         
         return DamageRelation(immune: immune, resistant: resistant, weak: weak)
     }
