@@ -21,6 +21,8 @@ struct PokemonSelectionView: View {
             VStack {
                 if let selectedName = holder.pokemon?.name {
                     Text(selectedName.capitalized)
+                        .font(.title)
+                        .padding(EdgeInsets(top: 16, leading: 0, bottom: 0, trailing: 0))
                 } else {
                     LoadingView()
                 }
