@@ -29,10 +29,18 @@ struct TypeCalculatorView: View {
             Button(action: {
                 self.showingSearchView.toggle()
             }) {
-                if let selectedName = holder.name {
-                    Text(selectedName.capitalized)
-                } else {
-                    Text("Search Pokemon")
+                VStack {
+                    if let selectedName = holder.name {
+                        Text(selectedName.capitalized)
+                        if let sprite1 = holder.pokemon?.sprites.frontDefault {
+                            PokemonImageView(url: sprite1)
+                        }
+                        if let sprite2 = holder.pokemon?.sprites.frontShiny {
+                            PokemonImageView(url: sprite2)
+                        }
+                    } else {
+                        Text("Search Pokemon")
+                    }
                 }
             }.sheet(isPresented: $showingSearchView) {
                 SearchListView()
