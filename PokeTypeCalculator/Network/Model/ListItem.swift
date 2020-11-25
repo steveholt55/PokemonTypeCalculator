@@ -15,3 +15,13 @@ struct ListItem: Codable, Identifiable {
         case name = "name"
     }
 }
+
+extension ListItem: Hashable {
+    static func == (lhs: ListItem, rhs: ListItem) -> Bool {
+        return lhs.name == rhs.name
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+}

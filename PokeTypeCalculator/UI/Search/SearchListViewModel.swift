@@ -10,11 +10,24 @@ import Combine
 
 class SearchListViewModel: ObservableObject {
     
+    private let recentUserDefaultsKey = "recentUserDefaultsKey"
+    
+    @Published var recents: [ListItem] = []
     @Published var list: [ListItem] = []
+    
     var cancellationToken: AnyCancellable?
     
     init() {
+        self.recents = ((UserDefaults.standard.array(forKey: self.recentUserDefaultsKey) as? [String]) ?? []).map { ListItem(name: $0) }
         getList()
+    }
+    
+    func addRecent(_ listItem: ListItem) {
+        if !self.recents.contains(listItem) {
+            self.recents.insert(listItem, at: 0)
+            self.recents = Array(self.recents.prefix(5))
+            UserDefaults.standard.set(recents.map { $0.name }, forKey: self.recentUserDefaultsKey)
+        }
     }
     
 }
@@ -30,7 +43,7 @@ extension SearchListViewModel {
             .sink(receiveCompletion: { _ in },
                   receiveValue: {
                     self.list = $0.results
-            })
+                  })
     }
     
 }
