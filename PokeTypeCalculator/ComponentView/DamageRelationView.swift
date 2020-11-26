@@ -20,11 +20,9 @@ struct DamageRelationView: View {
             List {
                 ForEach(calculation.sections) { section in
                     Section(header: Text(section.name)) {
-                        ScrollView {
-                            LazyVGrid(columns: gridItemLayout, spacing: 8) {
-                                ForEach(section.types) { type in
-                                    TypeBadgeView(type: type)
-                                }
+                        LazyVGrid(columns: gridItemLayout, spacing: 8) {
+                            ForEach(section.types) { type in
+                                TypeBadgeView(type: type)
                             }
                         }
                     }

@@ -15,11 +15,25 @@ struct PokemonHolderView: View {
         
         VStack {
             
-            if let sprite1 = holder.pokemon?.sprites.frontDefault {
-                PokemonImageView(url: sprite1)
+            HStack {
+                if let frontDefault = holder.pokemon?.sprites.frontDefault {
+                    PokemonImageView(url: frontDefault)
+                }
+                
+                if let frontFemale = holder.pokemon?.sprites.frontFemale {
+                    PokemonImageView(url: frontFemale)
+                }
             }
-            if let sprite2 = holder.pokemon?.sprites.frontShiny {
-                PokemonImageView(url: sprite2)
+            
+            HStack {
+                
+                if let frontShiny = holder.pokemon?.sprites.frontShiny {
+                    PokemonImageView(url: frontShiny)
+                }
+                
+                if let frontShinyFemale = holder.pokemon?.sprites.frontShinyFemale {
+                    PokemonImageView(url: frontShinyFemale)
+                }
             }
             
             HStack {

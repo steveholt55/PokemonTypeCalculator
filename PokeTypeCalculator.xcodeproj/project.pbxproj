@@ -152,7 +152,6 @@
 				CA0EB75F2567714D00981380 /* Preview Content */,
 				CAE6103D256E173800A65C3C /* UI */,
 				CA0EB798256771F600981380 /* Util */,
-				CA0EB788256771AE00981380 /* ViewController */,
 			);
 			path = PokeTypeCalculator;
 			sourceTree = "<group>";
@@ -193,13 +192,6 @@
 				CAA8E94F256B23D000A4F7C1 /* PokemonHolder.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		CA0EB788256771AE00981380 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		CA0EB789256771AE00981380 /* ComponentView */ = {
