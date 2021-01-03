@@ -32,7 +32,9 @@ struct TypeCalculatorView: View {
                 Spacer()
             }
             
-        }.onAppear(perform: {
+        }
+        .padding(0)
+        .onAppear(perform: {
             loadRandomPokemon()
         })
     }

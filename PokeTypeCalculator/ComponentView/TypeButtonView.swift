@@ -16,6 +16,8 @@ struct TypeButtonView: View {
     var body: some View {
         if let type = type.type {
             TypeBadgeView(type: type)
+                .frame(height: 44.0)
+                
         } else {
             if allowSelection {
                 HStack {

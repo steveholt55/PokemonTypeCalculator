@@ -19,8 +19,8 @@ struct TypeBadgeView: View {
                     .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                     .foregroundColor(.white)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(type.color)
-        .cornerRadius(4.0)
 
     }
 }
