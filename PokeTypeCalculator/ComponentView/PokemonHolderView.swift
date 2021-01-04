@@ -13,40 +13,47 @@ struct PokemonHolderView: View {
     
     var body: some View {
         
-        VStack {
             
-            HStack {
-                if let frontDefault = holder.pokemon?.sprites.frontDefault {
-                    PokemonImageView(url: frontDefault)
+            VStack {
+                
+                PokemonSelectionView(holder: self.holder)
+                    .frame(maxHeight: 50)
+                
+                HStack {
+                    if let frontDefault = holder.pokemon?.sprites.frontDefault {
+                        PokemonImageView(url: frontDefault)
+                    }
+                    
+                    if let frontFemale = holder.pokemon?.sprites.frontFemale {
+                        PokemonImageView(url: frontFemale)
+                    }
                 }
                 
-                if let frontFemale = holder.pokemon?.sprites.frontFemale {
-                    PokemonImageView(url: frontFemale)
-                }
-            }
-            
-            HStack {
-                
-                if let frontShiny = holder.pokemon?.sprites.frontShiny {
-                    PokemonImageView(url: frontShiny)
-                }
-                
-                if let frontShinyFemale = holder.pokemon?.sprites.frontShinyFemale {
-                    PokemonImageView(url: frontShinyFemale)
-                }
-            }
-            
-            HStack {
-                if let primaryType = self.holder.primaryType {
-                    TypeButtonView(type: primaryType)
+                HStack {
+                    
+                    if let frontShiny = holder.pokemon?.sprites.frontShiny {
+                        PokemonImageView(url: frontShiny)
+                    }
+                    
+                    if let frontShinyFemale = holder.pokemon?.sprites.frontShinyFemale {
+                        PokemonImageView(url: frontShinyFemale)
+                    }
                 }
                 
-                if let secondaryType = self.holder.secondaryType {
-                    TypeButtonView(type: secondaryType)
+                HStack(spacing: 0) {
+                    if let primaryType = self.holder.primaryType.type {
+                        TypeBadgeView(type: primaryType)
+                            .frame(maxWidth: .infinity)
+                    }
+                    
+                    if let secondaryType = self.holder.secondaryType.type {
+                        TypeBadgeView(type: secondaryType)
+                            .frame(maxWidth: .infinity)
+                    }
+                    
                 }
                 
-            }
-        }.padding(8)
+        }
     }
 }
 

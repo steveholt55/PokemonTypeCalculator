@@ -70,7 +70,7 @@ class PokemonHolder: ObservableObject {
 extension PokemonHolder {
     static func mock() -> PokemonHolder {
         
-        let pokemon = Pokemon(name: "Litleo", sprites: SpriteImages(backDefault: nil, backFemale: nil, backShiny: nil, backShinyFemale: nil, frontDefault: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/667.png"), frontFemale: nil, frontShiny: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/667.png"), frontShinyFemale: nil), types: [PokemonTypeHolder(slot: 1, type: PokemonType(name: "fire"))])
+        let pokemon = Pokemon(name: "Litleo", sprites: SpriteImages(backDefault: nil, backFemale: nil, backShiny: nil, backShinyFemale: nil, frontDefault: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/667.png"), frontFemale: nil, frontShiny: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/667.png"), frontShinyFemale: nil), types: [PokemonTypeHolder(slot: 1, type: PokemonType(name: "fire")), PokemonTypeHolder(slot: 2, type: PokemonType(name: "water"))])
         
         let pokemonHolder = PokemonHolder()
         pokemonHolder.pokemon = pokemon

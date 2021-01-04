@@ -18,16 +18,20 @@ struct PokemonSelectionView: View {
         Button(action: {
             self.showingSearchView.toggle()
         }) {
-            VStack {
+            VStack(spacing: 0) {
                 if let selectedName = holder.pokemon?.name {
                     Text(selectedName.capitalized)
-                        .font(.title)
-                        .padding(EdgeInsets(top: 16, leading: 0, bottom: 0, trailing: 0))
+                        .foregroundColor(Color(.label))
+                        .font(.largeTitle)
+                        .shadow(radius: 15)
+                        .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
                 } else {
                     LoadingView()
                 }
             }
-        }.sheet(isPresented: $showingSearchView) {
+        }
+        .foregroundColor(Color(.systemBackground))
+        .sheet(isPresented: $showingSearchView) {
             SearchListView()
                 .environmentObject(holder)
         }

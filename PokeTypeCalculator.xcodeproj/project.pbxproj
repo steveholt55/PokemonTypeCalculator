@@ -25,7 +25,6 @@
 		CA7D8130256CA5AF00D0AABA /* PokemonSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7D812F256CA5AF00D0AABA /* PokemonSelectionView.swift */; };
 		CA7D8135256CA81B00D0AABA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7D8134256CA81B00D0AABA /* LoadingView.swift */; };
 		CA7D813A256CACD700D0AABA /* DamageRelationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7D8139256CACD700D0AABA /* DamageRelationView.swift */; };
-		CAA3C30A2569978800C70F4E /* TypeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3C3092569978800C70F4E /* TypeButtonView.swift */; };
 		CAA3C30F2569C4E900C70F4E /* DamageRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3C30E2569C4E900C70F4E /* DamageRelation.swift */; };
 		CAA8E91D256A0B8800A4F7C1 /* DamageRelationCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8E91C256A0B8800A4F7C1 /* DamageRelationCalculation.swift */; };
 		CAA8E923256AFC8800A4F7C1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8E922256AFC8800A4F7C1 /* APIClient.swift */; };
@@ -83,7 +82,6 @@
 		CA7D812F256CA5AF00D0AABA /* PokemonSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelectionView.swift; sourceTree = "<group>"; };
 		CA7D8134256CA81B00D0AABA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		CA7D8139256CACD700D0AABA /* DamageRelationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageRelationView.swift; sourceTree = "<group>"; };
-		CAA3C3092569978800C70F4E /* TypeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeButtonView.swift; sourceTree = "<group>"; };
 		CAA3C30E2569C4E900C70F4E /* DamageRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageRelation.swift; sourceTree = "<group>"; };
 		CAA8E91C256A0B8800A4F7C1 /* DamageRelationCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageRelationCalculation.swift; sourceTree = "<group>"; };
 		CAA8E922256AFC8800A4F7C1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				CA0EB78B256771BE00981380 /* TypeBadgeView.swift */,
-				CAA3C3092569978800C70F4E /* TypeButtonView.swift */,
 				CA73F0AE256C2ADE00417092 /* PokemonImageView.swift */,
 				CA7D8127256CA36200D0AABA /* PokemonHolderView.swift */,
 				CA7D812F256CA5AF00D0AABA /* PokemonSelectionView.swift */,
@@ -417,7 +414,6 @@
 				CA0EB78C256771BE00981380 /* TypeBadgeView.swift in Sources */,
 				CAA8E93B256AFF2400A4F7C1 /* Pokemon.swift in Sources */,
 				CAE61046256E173800A65C3C /* SearchListViewModel.swift in Sources */,
-				CAA3C30A2569978800C70F4E /* TypeButtonView.swift in Sources */,
 				CAA3C30F2569C4E900C70F4E /* DamageRelation.swift in Sources */,
 				CA0EB794256771DB00981380 /* Type.swift in Sources */,
 				CA39D7872575DE7C00E1DE66 /* PokemonTypeHolder.swift in Sources */,

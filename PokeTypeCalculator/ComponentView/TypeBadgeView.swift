@@ -10,6 +10,7 @@ import SwiftUI
 struct TypeBadgeView: View {
     let type: Type
     
+    
     var body: some View {
         
         HStack {
@@ -21,7 +22,6 @@ struct TypeBadgeView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(type.color)
-
     }
 }
 

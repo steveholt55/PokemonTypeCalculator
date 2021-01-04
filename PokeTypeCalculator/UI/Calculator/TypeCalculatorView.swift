@@ -10,29 +10,21 @@ import Combine
 
 struct TypeCalculatorView: View {
     
-    // Type Selection
-    @State private var showingPrimaryTypeSelection = false
-    @State private var showingSecondaryTypeSelection = false
-    
     // Search
     @ObservedObject var holder: PokemonHolder = PokemonHolder()
     
     var body: some View {
         
-        VStack {
-            
-            PokemonSelectionView(holder: self.holder)
+        VStack(spacing: 0) {
             
             PokemonHolderView(holder: self.holder)
             
             DamageRelationView(holder: self.holder)
+                .layoutPriority(.greatestFiniteMagnitude)
             
-            // Make stuff float to top if we have data
-            if self.holder.pokemon != nil {
-                Spacer()
-            }
             
         }
+        .edgesIgnoringSafeArea(.bottom)
         .padding(0)
         .onAppear(perform: {
             loadRandomPokemon()
