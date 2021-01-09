@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct TypeBadgeView: View {
-    let type: Type
     
+    let type: Type
     
     var body: some View {
         
         HStack {
-            Text(type.rawValue.uppercased())
-                    .font(.caption)
-                    .fontWeight(.black)
-                    .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                    .foregroundColor(.white)
+            
+            Circle()
+                .frame(maxWidth: 34, maxHeight: 34)
+                .foregroundColor(type.color)
+            
+            Text(type.rawValue.capitalized)
+                    .font(.body)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(type.color)
+        .padding(.horizontal, 8.0)
     }
 }
 
