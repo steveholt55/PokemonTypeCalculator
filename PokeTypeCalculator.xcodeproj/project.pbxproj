@@ -39,6 +39,7 @@
 		FBEA484A25AA27AA00C9017E /* PokemonTypeHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEA484425AA27AA00C9017E /* PokemonTypeHolder.swift */; };
 		FBEA484B25AA27AA00C9017E /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEA484525AA27AA00C9017E /* PokemonType.swift */; };
 		FBEA485325AA5D5E00C9017E /* DamageRelationSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEA485225AA5D5E00C9017E /* DamageRelationSectionHeader.swift */; };
+		FBEA485825AA607D00C9017E /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEA485725AA607D00C9017E /* SearchButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		FBEA484425AA27AA00C9017E /* PokemonTypeHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonTypeHolder.swift; sourceTree = "<group>"; };
 		FBEA484525AA27AA00C9017E /* PokemonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
 		FBEA485225AA5D5E00C9017E /* DamageRelationSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamageRelationSectionHeader.swift; sourceTree = "<group>"; };
+		FBEA485725AA607D00C9017E /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				CA7D8134256CA81B00D0AABA /* LoadingView.swift */,
 				CA7D8139256CACD700D0AABA /* DamageRelationView.swift */,
 				FBEA485225AA5D5E00C9017E /* DamageRelationSectionHeader.swift */,
+				FBEA485725AA607D00C9017E /* SearchButton.swift */,
 			);
 			path = ComponentView;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				CA7D8128256CA36200D0AABA /* PokemonHolderView.swift in Sources */,
 				CAA8E923256AFC8800A4F7C1 /* APIClient.swift in Sources */,
 				FBEA484725AA27AA00C9017E /* ListResponse.swift in Sources */,
+				FBEA485825AA607D00C9017E /* SearchButton.swift in Sources */,
 				CAE61045256E173800A65C3C /* TypeCalculatorView.swift in Sources */,
 				FBEA485325AA5D5E00C9017E /* DamageRelationSectionHeader.swift in Sources */,
 				CA0EB78C256771BE00981380 /* TypeBadgeView.swift in Sources */,

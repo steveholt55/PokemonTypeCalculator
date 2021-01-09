@@ -15,20 +15,36 @@ struct TypeCalculatorView: View {
     
     var body: some View {
         
-        VStack(spacing: 0) {
+        ZStack {
             
-            PokemonHolderView(holder: self.holder)
+            // Main View
+            VStack(spacing: 0) {
+                PokemonHolderView(holder: self.holder)
+                
+                DamageRelationView(holder: self.holder)
+                    .layoutPriority(.greatestFiniteMagnitude)
+                
+            }
+            .edgesIgnoringSafeArea(.bottom)
+            .padding(0)
+            .onAppear(perform: {
+                loadRandomPokemon()
+            })
             
-            DamageRelationView(holder: self.holder)
-                .layoutPriority(.greatestFiniteMagnitude)
-            
-            
+            // Only show the FAB, if we have data
+            if self.holder.pokemon != nil {
+                // FAB
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        SearchButton(holder: self.holder)
+                            .padding(.trailing, 16.0)
+                            .padding(.bottom, 8.0)
+                    }
+                }
+            }
         }
-        .edgesIgnoringSafeArea(.bottom)
-        .padding(0)
-        .onAppear(perform: {
-            loadRandomPokemon()
-        })
     }
     
     private func loadRandomPokemon() {
