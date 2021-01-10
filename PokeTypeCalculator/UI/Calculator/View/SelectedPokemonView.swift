@@ -1,5 +1,5 @@
 //
-//  PokemonSelectionView.swift
+//  SelectedPokemonView.swift
 //  PokeTypeCalculator
 //
 //  Created by Brandon Jenniges on 11/23/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PokemonSelectionView: View {
+struct SelectedPokemonView: View {
     
     @ObservedObject var holder: PokemonHolder
     
@@ -25,8 +25,8 @@ struct PokemonSelectionView: View {
     }
 }
 
-struct PokemonSelectionView_Previews: PreviewProvider {
+struct SelectedPokemonView_Previews: PreviewProvider {
     static var previews: some View {
-        return PokemonSelectionView(holder: PokemonHolder.mock())
+        return SelectedPokemonView(holder: PokemonHolder.mock())
     }
 }

@@ -20,6 +20,7 @@ struct TypeCalculatorView: View {
             // Main View
             VStack(spacing: 0) {
                 PokemonHolderView(holder: self.holder)
+                    .padding(.vertical, 12.0)
                 
                 DamageRelationView(holder: self.holder)
                     .layoutPriority(.greatestFiniteMagnitude)
