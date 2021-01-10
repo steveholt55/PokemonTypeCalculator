@@ -28,28 +28,28 @@ struct DamageRelationCalculation {
         var result: [TypeSection] = []
         
         if superWeak.count > 0 {
-            result.append(TypeSection(name: "Takes 4x From", types: Array(superWeak).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeSection(name: "Extra Weak", types: Array(superWeak).sorted { $0.rawValue < $1.rawValue }))
         }
         
         if weak.count > 0 {
-            result.append(TypeSection(name: "Takes 2x From", types: Array(weak).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeSection(name: "Weak", types: Array(weak).sorted { $0.rawValue < $1.rawValue }))
         }
         
         if normal.count > 0 {
-            result.append(TypeSection(name: "Takes 1x From", types: Array(normal).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeSection(name: "Normal Resistance", types: Array(normal).sorted { $0.rawValue < $1.rawValue }))
         }
         
         if resistant.count > 0 {
-            result.append(TypeSection(name: "Takes 1/2x From", types: Array(resistant).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeSection(name: "Resistant", types: Array(resistant).sorted { $0.rawValue < $1.rawValue }))
         }
         
         if superResistant.count > 0 {
-            result.append(TypeSection(name: "Takes 1/4x From", types: Array(superResistant).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeSection(name: "Extra Resistant", types: Array(superResistant).sorted { $0.rawValue < $1.rawValue }))
         }
         
         
         if immune.count > 0 {
-            result.append(TypeSection(name: "Takes 0x From", types: Array(immune).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeSection(name: "Immune", types: Array(immune).sorted { $0.rawValue < $1.rawValue }))
         }
         
         return result
@@ -65,7 +65,7 @@ struct DamageRelationCalculation {
         }
         
         for type in Array(primaryType.immune) + Array(secondaryType?.immune ?? []) {
-            result[type] = result[type]! - 500
+            result[type] = -500
         }
         
         for type in Array(primaryType.weak) + Array(secondaryType?.weak ?? []) {
