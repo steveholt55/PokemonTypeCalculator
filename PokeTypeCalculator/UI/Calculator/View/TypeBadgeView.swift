@@ -20,7 +20,7 @@ struct TypeBadgeView: View {
                 .foregroundColor(type.color)
             
             Text(type.rawValue.capitalized)
-                    .font(.body)
+                .font(.title3)
         }
         .padding(.horizontal, 8.0)
     }
