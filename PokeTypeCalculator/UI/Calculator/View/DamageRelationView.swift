@@ -17,7 +17,7 @@ struct DamageRelationView: View {
             
             List {
                 ForEach(calculation.sections) { section in
-                    Section(header: DamageRelationSectionHeader(string: section.name)) {
+                    Section(header: DamageRelationSectionHeader(headerText: section.name)) {
                         ForEach(section.types) { type in
                             TypeBadgeView(type: type)
                         }

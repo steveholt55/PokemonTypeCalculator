@@ -77,7 +77,7 @@ struct DamageRelationCalculation {
         }
         
         immune = Set(result.filter {
-            $0.value == -500
+            $0.value <= -500
         }.map {
             $0.key
         })
