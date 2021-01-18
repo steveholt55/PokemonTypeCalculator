@@ -10,7 +10,6 @@ import Combine
 
 struct TypeCalculatorView: View {
     
-    // Search
     @ObservedObject var holder: PokemonHolder = PokemonHolder()
     
     var body: some View {
@@ -20,6 +19,9 @@ struct TypeCalculatorView: View {
             // Main View
             VStack(spacing: 0) {
                 PokemonHolderView(holder: self.holder)
+                    .padding(.vertical, 12.0)
+                
+                DetailsButton(holder: self.holder)
                     .padding(.vertical, 12.0)
                 
                 DamageRelationView(holder: self.holder)

@@ -10,6 +10,7 @@ import Foundation
 struct Pokemon: Codable, Identifiable {
     var id = UUID()
     let name: String
+    let abilities: [Ability]
     let sprites: SpriteImages
     let types: [PokemonTypeHolder]
 
@@ -27,6 +28,7 @@ struct Pokemon: Codable, Identifiable {
     
     enum CodingKeys: String, CodingKey {
         case types      = "types"
+        case abilities  = "abilities"
         case name       = "name"
         case sprites    = "sprites"
     }

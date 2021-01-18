@@ -24,32 +24,32 @@ struct DamageRelationCalculation {
         return normal
     }
     
-    var sections: [TypeSection] {
-        var result: [TypeSection] = []
+    var sections: [TypeDescriptionSection] {
+        var result: [TypeDescriptionSection] = []
         
         if superWeak.count > 0 {
-            result.append(TypeSection(name: "Extra Weak", types: Array(superWeak).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeDescriptionSection(name: "Extra Weak", types: Array(superWeak).sorted { $0.rawValue < $1.rawValue }))
         }
         
         if weak.count > 0 {
-            result.append(TypeSection(name: "Weak", types: Array(weak).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeDescriptionSection(name: "Weak", types: Array(weak).sorted { $0.rawValue < $1.rawValue }))
         }
         
         if normal.count > 0 {
-            result.append(TypeSection(name: "Normal Resistance", types: Array(normal).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeDescriptionSection(name: "Normal Resistance", types: Array(normal).sorted { $0.rawValue < $1.rawValue }))
         }
         
         if resistant.count > 0 {
-            result.append(TypeSection(name: "Resistant", types: Array(resistant).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeDescriptionSection(name: "Resistant", types: Array(resistant).sorted { $0.rawValue < $1.rawValue }))
         }
         
         if superResistant.count > 0 {
-            result.append(TypeSection(name: "Extra Resistant", types: Array(superResistant).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeDescriptionSection(name: "Extra Resistant", types: Array(superResistant).sorted { $0.rawValue < $1.rawValue }))
         }
         
         
         if immune.count > 0 {
-            result.append(TypeSection(name: "Immune", types: Array(immune).sorted { $0.rawValue < $1.rawValue }))
+            result.append(TypeDescriptionSection(name: "Immune", types: Array(immune).sorted { $0.rawValue < $1.rawValue }))
         }
         
         return result

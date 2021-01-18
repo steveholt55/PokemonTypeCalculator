@@ -15,9 +15,10 @@ struct TypeBadgeView: View {
         
         HStack {
             
-            Circle()
-                .frame(width: 34, height: 34)
+            Rectangle()
+                .frame(width: 24, height: 24)
                 .foregroundColor(type.color)
+                .shadow(radius: 1)
             
             Text(type.rawValue.capitalized)
                 .font(.title3)
