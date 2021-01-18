@@ -25,8 +25,9 @@ struct DetailsButton: View {
                 .foregroundColor(Color.red)
         }
         .sheet(isPresented: $showingDetailView) {
-            DetailView(holder: self.holder)
-                .environmentObject(holder)
+            if let pokemon = self.holder.pokemon {
+                DetailView(pokemon: pokemon)
+            }
         }
         
     

@@ -12,6 +12,10 @@ struct TypeCalculatorView: View {
     
     @ObservedObject var holder: PokemonHolder = PokemonHolder()
     
+    var hasData: Bool {
+        self.holder.pokemon != nil
+    }
+    
     var body: some View {
         
         ZStack {
@@ -21,11 +25,13 @@ struct TypeCalculatorView: View {
                 PokemonHolderView(holder: self.holder)
                     .padding(.vertical, 12.0)
                 
-                DetailsButton(holder: self.holder)
-                    .padding(.vertical, 12.0)
-                
-                DamageRelationView(holder: self.holder)
-                    .layoutPriority(.greatestFiniteMagnitude)
+                if self.hasData {
+                    DetailsButton(holder: self.holder)
+                        .padding(.vertical, 12.0)
+                    
+                    DamageRelationView(holder: self.holder)
+                        .layoutPriority(.greatestFiniteMagnitude)
+                }
                 
             }
             .edgesIgnoringSafeArea(.bottom)
@@ -35,7 +41,7 @@ struct TypeCalculatorView: View {
             })
             
             // Only show the FAB, if we have data
-            if self.holder.pokemon != nil {
+            if self.hasData {
                 // FAB
                 VStack {
                     Spacer()

@@ -1,13 +1,13 @@
 //
-//  DamageRelationSectionHeader.swift
+//  SectionHeaderView.swift
 //  PokeTypeCalculator
 //
-//  Created by Brandon Jenniges on 1/9/21.
+//  Created by Brandon Jenniges on 1/18/21.
 //
 
 import SwiftUI
 
-struct DamageRelationSectionHeader: View {
+struct SectionHeaderView: View {
     
     let headerText: String
     
@@ -19,8 +19,8 @@ struct DamageRelationSectionHeader: View {
     }
 }
 
-struct DamageRelationSectionHeader_Previews: PreviewProvider {
+struct SectionHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        DamageRelationSectionHeader(headerText: "Takes 1X From")
+        SectionHeaderView(headerText: "Takes 1X From")
     }
 }

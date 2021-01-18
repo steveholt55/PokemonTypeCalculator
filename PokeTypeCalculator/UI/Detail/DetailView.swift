@@ -9,16 +9,30 @@ import SwiftUI
 
 struct DetailView: View {
     
-    @ObservedObject var holder: PokemonHolder = PokemonHolder()
+    @State var pokemon: Pokemon
+    
+    enum DetailSection: String, Identifiable {
+        var id: String {
+            self.rawValue
+        }
+        
+        case ability
+    }
+    
+    @State var sections: [DetailSection] = []
     
     var body: some View {
+        
         VStack {
-            Text("Abilities")
+            
+            Text(pokemon.name.capitalized)
+                .foregroundColor(Color(.label))
+                .font(.largeTitle)
+                .shadow(radius: 15)
+                .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
             
             List {
-                ForEach(holder.pokemon?.abilities ?? []) { ability in
-                    Text(ability.name.capitalized)
-                }
+                AbilitySectionView(pokemon: pokemon)
             }
         }
     }
@@ -26,6 +40,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(pokemon: PokemonHolder.mock().pokemon!)
     }
 }

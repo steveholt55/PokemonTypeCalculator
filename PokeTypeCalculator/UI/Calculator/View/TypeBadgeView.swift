@@ -22,6 +22,7 @@ struct TypeBadgeView: View {
             
             Text(type.rawValue.capitalized)
                 .font(.title3)
+            
         }
         .padding(.horizontal, 8.0)
     }
