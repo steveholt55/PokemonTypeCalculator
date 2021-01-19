@@ -18,7 +18,9 @@ struct PokemonHolderView: View {
                 SelectedPokemonView(holder: self.holder)
                     .frame(maxHeight: 50)
                 
-                PokemonSpriteView(holder: self.holder)
+                if let officialArtImage = self.holder.pokemon?.sprites.officialArtImageURL {
+                    PokemonOfficialArtView(imageURL: officialArtImage)
+                }
                 
                 HStack(spacing: 0) {
                     if let primaryType = self.holder.primaryType.type {

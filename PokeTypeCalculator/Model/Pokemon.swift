@@ -26,6 +26,10 @@ struct Pokemon: Codable, Identifiable {
         return self.sprites.frontDefault != nil && self.sprites.frontFemale != nil
     }
     
+    var hasAbilities: Bool {
+        return self.abilities.count > 0
+    }
+    
     enum CodingKeys: String, CodingKey {
         case types      = "types"
         case abilities  = "abilities"

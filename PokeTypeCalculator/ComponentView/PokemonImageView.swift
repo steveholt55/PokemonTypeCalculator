@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PokemonImageView: View {
     @ObservedObject var imageLoader:ImageLoader
-    @State var image:UIImage = UIImage()
+    @State var image: UIImage = UIImage()
+    @State var imageHeight: CGFloat = 200
     
     init(url:URL) {
         imageLoader = ImageLoader(url:url)
@@ -19,7 +20,7 @@ struct PokemonImageView: View {
         Image(uiImage: image)
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(width:100, height:100)
+            .frame(height:self.imageHeight)
             .onReceive(imageLoader.didChange) { data in
                 self.image = UIImage(data: data) ?? UIImage()
             }

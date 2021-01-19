@@ -16,10 +16,24 @@ struct DetailView: View {
             self.rawValue
         }
         
+        //case bio
         case ability
+        /*
+        case form
+        case game
+        case stat
+        case move
+        */
     }
     
-    @State var sections: [DetailSection] = []
+    var sections: [DetailSection] {
+        var showableSection: [DetailSection] = []
+        
+        if pokemon.hasAbilities {
+            showableSection.append(.ability)
+        }
+        return showableSection
+    }
     
     var body: some View {
         
@@ -32,7 +46,12 @@ struct DetailView: View {
                 .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
             
             List {
-                AbilitySectionView(pokemon: pokemon)
+                ForEach(self.sections) { section in
+                    switch section {
+                    case .ability:
+                        AbilitySectionView(pokemon: pokemon)
+                    }
+                }
             }
         }
     }
