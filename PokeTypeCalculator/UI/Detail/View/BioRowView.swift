@@ -1,5 +1,5 @@
 //
-//  StatRowView.swift
+//  BioRowView.swift
 //  PokeTypeCalculator
 //
 //  Created by Brandon Jenniges on 1/19/21.
@@ -7,26 +7,25 @@
 
 import SwiftUI
 
-struct StatRowView: View {
+struct BioRowView: View {
     
-    let stat: Stat
+    let heading: String
+    let detail: String
     
     var body: some View {
         
         HStack {
-            
-            Text("\(stat.name.rawValue.capitalized):")
+            Text("\(heading.capitalized):")
                 .font(.title2)
             
-            Text("\(stat.baseStat)")
+            Text(detail.capitalized)
                 .font(.title3)
-            
         }
     }
 }
 
-struct StatRowView_Previews: PreviewProvider {
+struct BioRowView_Previews: PreviewProvider {
     static var previews: some View {
-        StatRowView(stat: Stat.mock())
+        BioRowView(heading: "Height", detail: "300")
     }
 }

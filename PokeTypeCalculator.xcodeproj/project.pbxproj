@@ -29,9 +29,12 @@
 		FB61845E25B7E09B00EA1DCC /* StatSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61845D25B7E09B00EA1DCC /* StatSectionView.swift */; };
 		FB61846625B7E22400EA1DCC /* FormRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61846525B7E22400EA1DCC /* FormRowView.swift */; };
 		FB61846B25B7E22C00EA1DCC /* FormSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61846A25B7E22C00EA1DCC /* FormSectionView.swift */; };
+		FB61847625B7F71E00EA1DCC /* PokemonSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61847525B7F71E00EA1DCC /* PokemonSpriteView.swift */; };
+		FB61847E25B7F8D500EA1DCC /* BioRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61847D25B7F8D500EA1DCC /* BioRowView.swift */; };
+		FB61848325B7F8DD00EA1DCC /* BioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61848225B7F8DD00EA1DCC /* BioSectionView.swift */; };
+		FB61848B25B7FBFD00EA1DCC /* BioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61848A25B7FBFD00EA1DCC /* BioItem.swift */; };
 		FB70C43625AAA0A6004A654E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43425AAA0A6004A654E /* SearchBarView.swift */; };
 		FB70C43725AAA0A6004A654E /* SearchItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43525AAA0A6004A654E /* SearchItemRow.swift */; };
-		FB70C44425AAA0AE004A654E /* PokemonSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43D25AAA0AD004A654E /* PokemonSpriteView.swift */; };
 		FB70C44525AAA0AE004A654E /* SelectedPokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43E25AAA0AD004A654E /* SelectedPokemonView.swift */; };
 		FB70C44625AAA0AE004A654E /* PokemonHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43F25AAA0AE004A654E /* PokemonHolderView.swift */; };
 		FB70C44725AAA0AE004A654E /* TypeBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C44025AAA0AE004A654E /* TypeBadgeView.swift */; };
@@ -101,9 +104,12 @@
 		FB61845D25B7E09B00EA1DCC /* StatSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatSectionView.swift; sourceTree = "<group>"; };
 		FB61846525B7E22400EA1DCC /* FormRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowView.swift; sourceTree = "<group>"; };
 		FB61846A25B7E22C00EA1DCC /* FormSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSectionView.swift; sourceTree = "<group>"; };
+		FB61847525B7F71E00EA1DCC /* PokemonSpriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonSpriteView.swift; sourceTree = "<group>"; };
+		FB61847D25B7F8D500EA1DCC /* BioRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioRowView.swift; sourceTree = "<group>"; };
+		FB61848225B7F8DD00EA1DCC /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
+		FB61848A25B7FBFD00EA1DCC /* BioItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioItem.swift; sourceTree = "<group>"; };
 		FB70C43425AAA0A6004A654E /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		FB70C43525AAA0A6004A654E /* SearchItemRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemRow.swift; sourceTree = "<group>"; };
-		FB70C43D25AAA0AD004A654E /* PokemonSpriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonSpriteView.swift; sourceTree = "<group>"; };
 		FB70C43E25AAA0AD004A654E /* SelectedPokemonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedPokemonView.swift; sourceTree = "<group>"; };
 		FB70C43F25AAA0AE004A654E /* PokemonHolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonHolderView.swift; sourceTree = "<group>"; };
 		FB70C44025AAA0AE004A654E /* TypeBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeBadgeView.swift; sourceTree = "<group>"; };
@@ -299,7 +305,6 @@
 		FB70C43B25AAA0AD004A654E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FB70C43D25AAA0AD004A654E /* PokemonSpriteView.swift */,
 				FB70C43E25AAA0AD004A654E /* SelectedPokemonView.swift */,
 				FB70C43F25AAA0AE004A654E /* PokemonHolderView.swift */,
 				FB70C44025AAA0AE004A654E /* TypeBadgeView.swift */,
@@ -315,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				FBB30E7525B52227006D0594 /* Ability.swift */,
+				FB61848A25B7FBFD00EA1DCC /* BioItem.swift */,
 				FB61844825B7D66F00EA1DCC /* Form.swift */,
 				FBB30E7D25B522C2006D0594 /* SpriteImages.swift */,
 				FB61844325B7D25A00EA1DCC /* Stat.swift */,
@@ -346,8 +352,11 @@
 			children = (
 				FBB30E9E25B5D160006D0594 /* AbilityRowView.swift */,
 				FBB30EB125B5D647006D0594 /* AbilitySectionView.swift */,
+				FB61847D25B7F8D500EA1DCC /* BioRowView.swift */,
+				FB61848225B7F8DD00EA1DCC /* BioSectionView.swift */,
 				FB61846525B7E22400EA1DCC /* FormRowView.swift */,
 				FB61846A25B7E22C00EA1DCC /* FormSectionView.swift */,
+				FB61847525B7F71E00EA1DCC /* PokemonSpriteView.swift */,
 				FB61845825B7E08C00EA1DCC /* StatRowView.swift */,
 				FB61845D25B7E09B00EA1DCC /* StatSectionView.swift */,
 			);
@@ -488,6 +497,7 @@
 				FBB30E8725B522CC006D0594 /* DamageRelationCalculation.swift in Sources */,
 				FB70C44725AAA0AE004A654E /* TypeBadgeView.swift in Sources */,
 				FBB30E7E25B522C2006D0594 /* SpriteImages.swift in Sources */,
+				FB61847E25B7F8D500EA1DCC /* BioRowView.swift in Sources */,
 				CAA8E92B256AFCD500A4F7C1 /* PokemonAPI.swift in Sources */,
 				FB70C43725AAA0A6004A654E /* SearchItemRow.swift in Sources */,
 				FB70C44925AAA0AE004A654E /* SearchButton.swift in Sources */,
@@ -509,16 +519,18 @@
 				CAE61045256E173800A65C3C /* TypeCalculatorView.swift in Sources */,
 				FB61845925B7E08C00EA1DCC /* StatRowView.swift in Sources */,
 				FB61844925B7D66F00EA1DCC /* Form.swift in Sources */,
-				FB70C44425AAA0AE004A654E /* PokemonSpriteView.swift in Sources */,
 				FBB30EBA25B68A4C006D0594 /* PokemonOfficialArtView.swift in Sources */,
 				FBB30E7625B52227006D0594 /* Ability.swift in Sources */,
 				CAE61046256E173800A65C3C /* SearchListViewModel.swift in Sources */,
 				CA0EB794256771DB00981380 /* Type.swift in Sources */,
 				CA73F0B4256C2B0600417092 /* ImageLoader.swift in Sources */,
+				FB61847625B7F71E00EA1DCC /* PokemonSpriteView.swift in Sources */,
 				FB70C43625AAA0A6004A654E /* SearchBarView.swift in Sources */,
 				FBB30E9F25B5D160006D0594 /* AbilityRowView.swift in Sources */,
 				CAA8E950256B23D000A4F7C1 /* PokemonHolder.swift in Sources */,
 				FB61846625B7E22400EA1DCC /* FormRowView.swift in Sources */,
+				FB61848B25B7FBFD00EA1DCC /* BioItem.swift in Sources */,
+				FB61848325B7F8DD00EA1DCC /* BioSectionView.swift in Sources */,
 				FBB30E8825B522CC006D0594 /* DamageRelation.swift in Sources */,
 				CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */,
 				FB61845E25B7E09B00EA1DCC /* StatSectionView.swift in Sources */,

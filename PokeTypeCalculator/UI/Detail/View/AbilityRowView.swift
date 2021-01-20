@@ -25,7 +25,6 @@ struct AbilityRowView: View {
             }
             
         }
-        .padding(.horizontal, 8.0)
     }
 }
 

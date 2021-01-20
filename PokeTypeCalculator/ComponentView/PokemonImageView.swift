@@ -10,10 +10,11 @@ import SwiftUI
 struct PokemonImageView: View {
     @ObservedObject var imageLoader:ImageLoader
     @State var image: UIImage = UIImage()
-    @State var imageHeight: CGFloat = 200
+    let imageHeight: CGFloat
     
-    init(url:URL) {
-        imageLoader = ImageLoader(url:url)
+    init(url:URL, imageHeight: CGFloat = 200) {
+        self.imageLoader = ImageLoader(url:url)
+        self.imageHeight = imageHeight
     }
     
     var body: some View {

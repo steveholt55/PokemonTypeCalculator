@@ -8,7 +8,7 @@
 import Foundation
 
 struct Pokemon: Codable, Identifiable {
-    var id = UUID()
+    let id: Int
     let abilities: [Ability]
     let baseExperience: Int?
     let forms: [Form]
@@ -18,7 +18,7 @@ struct Pokemon: Codable, Identifiable {
     let stats: [Stat]
     let types: [PokemonTypeHolder]
     let weight: Int?
-
+    
     var displayTypes: [Type] {
         self.types.sorted {
             $0.slot < $1.slot
@@ -27,7 +27,27 @@ struct Pokemon: Codable, Identifiable {
         }
     }
     
+    var bioInfo: [BioItem] {
+        var info: [BioItem] = []
+        info.append(BioItem(name: .number, value: "\(id)"))
+        
+        if let height = self.height {
+            info.append(BioItem(name: .height, value: "\(height)"))
+        }
+        
+        if let weight = self.weight {
+            info.append(BioItem(name: .weight, value: "\(weight)"))
+        }
+        
+        if let baseExperience = self.baseExperience {
+            info.append(BioItem(name: .baseExperience, value: "\(baseExperience)"))
+        }
+        
+        return info
+    }
+    
     enum CodingKeys: String, CodingKey {
+        case id                 = "id"
         case abilities          = "abilities"
         case baseExperience     = "base_experience"
         case forms              = "forms"

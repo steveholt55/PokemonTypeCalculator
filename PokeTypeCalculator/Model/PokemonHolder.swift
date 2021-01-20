@@ -70,7 +70,7 @@ class PokemonHolder: ObservableObject {
 extension PokemonHolder {
     static func mock() -> PokemonHolder {
         
-        let pokemon = Pokemon(abilities: [Ability.mock()], baseExperience: 200, forms: [Form.mock()], name: "Litleo", height: 10, sprites: SpriteImages.mock(), stats: [Stat.mock()], types: [PokemonTypeHolder.mock()], weight: 30)
+        let pokemon = Pokemon(id: 1, abilities: [Ability.mock()], baseExperience: 200, forms: [Form.mock()], name: "Litleo", height: 10, sprites: SpriteImages.mock(), stats: [Stat.mock()], types: [PokemonTypeHolder.mock()], weight: 30)
         
         let pokemonHolder = PokemonHolder()
         pokemonHolder.pokemon = pokemon
