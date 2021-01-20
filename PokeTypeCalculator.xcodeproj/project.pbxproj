@@ -25,6 +25,10 @@
 		CAE61048256E173800A65C3C /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE61043256E173800A65C3C /* SearchListView.swift */; };
 		FB61844425B7D25A00EA1DCC /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844325B7D25A00EA1DCC /* Stat.swift */; };
 		FB61844925B7D66F00EA1DCC /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844825B7D66F00EA1DCC /* Form.swift */; };
+		FB61845925B7E08C00EA1DCC /* StatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61845825B7E08C00EA1DCC /* StatRowView.swift */; };
+		FB61845E25B7E09B00EA1DCC /* StatSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61845D25B7E09B00EA1DCC /* StatSectionView.swift */; };
+		FB61846625B7E22400EA1DCC /* FormRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61846525B7E22400EA1DCC /* FormRowView.swift */; };
+		FB61846B25B7E22C00EA1DCC /* FormSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61846A25B7E22C00EA1DCC /* FormSectionView.swift */; };
 		FB70C43625AAA0A6004A654E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43425AAA0A6004A654E /* SearchBarView.swift */; };
 		FB70C43725AAA0A6004A654E /* SearchItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43525AAA0A6004A654E /* SearchItemRow.swift */; };
 		FB70C44425AAA0AE004A654E /* PokemonSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43D25AAA0AD004A654E /* PokemonSpriteView.swift */; };
@@ -93,6 +97,10 @@
 		CAE61043256E173800A65C3C /* SearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
 		FB61844325B7D25A00EA1DCC /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		FB61844825B7D66F00EA1DCC /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		FB61845825B7E08C00EA1DCC /* StatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRowView.swift; sourceTree = "<group>"; };
+		FB61845D25B7E09B00EA1DCC /* StatSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatSectionView.swift; sourceTree = "<group>"; };
+		FB61846525B7E22400EA1DCC /* FormRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowView.swift; sourceTree = "<group>"; };
+		FB61846A25B7E22C00EA1DCC /* FormSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSectionView.swift; sourceTree = "<group>"; };
 		FB70C43425AAA0A6004A654E /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		FB70C43525AAA0A6004A654E /* SearchItemRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemRow.swift; sourceTree = "<group>"; };
 		FB70C43D25AAA0AD004A654E /* PokemonSpriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonSpriteView.swift; sourceTree = "<group>"; };
@@ -338,6 +346,10 @@
 			children = (
 				FBB30E9E25B5D160006D0594 /* AbilityRowView.swift */,
 				FBB30EB125B5D647006D0594 /* AbilitySectionView.swift */,
+				FB61846525B7E22400EA1DCC /* FormRowView.swift */,
+				FB61846A25B7E22C00EA1DCC /* FormSectionView.swift */,
+				FB61845825B7E08C00EA1DCC /* StatRowView.swift */,
+				FB61845D25B7E09B00EA1DCC /* StatSectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -487,6 +499,7 @@
 				CA7D8135256CA81B00D0AABA /* LoadingView.swift in Sources */,
 				FBEA484625AA27AA00C9017E /* ListItem.swift in Sources */,
 				FBB30EB225B5D647006D0594 /* AbilitySectionView.swift in Sources */,
+				FB61846B25B7E22C00EA1DCC /* FormSectionView.swift in Sources */,
 				FBEA484A25AA27AA00C9017E /* PokemonTypeHolder.swift in Sources */,
 				FBB30E9625B52624006D0594 /* DetailView.swift in Sources */,
 				FBB30E9025B525B7006D0594 /* DetailsButton.swift in Sources */,
@@ -494,6 +507,7 @@
 				CAA8E923256AFC8800A4F7C1 /* APIClient.swift in Sources */,
 				FBEA484725AA27AA00C9017E /* ListResponse.swift in Sources */,
 				CAE61045256E173800A65C3C /* TypeCalculatorView.swift in Sources */,
+				FB61845925B7E08C00EA1DCC /* StatRowView.swift in Sources */,
 				FB61844925B7D66F00EA1DCC /* Form.swift in Sources */,
 				FB70C44425AAA0AE004A654E /* PokemonSpriteView.swift in Sources */,
 				FBB30EBA25B68A4C006D0594 /* PokemonOfficialArtView.swift in Sources */,
@@ -504,8 +518,10 @@
 				FB70C43625AAA0A6004A654E /* SearchBarView.swift in Sources */,
 				FBB30E9F25B5D160006D0594 /* AbilityRowView.swift in Sources */,
 				CAA8E950256B23D000A4F7C1 /* PokemonHolder.swift in Sources */,
+				FB61846625B7E22400EA1DCC /* FormRowView.swift in Sources */,
 				FBB30E8825B522CC006D0594 /* DamageRelation.swift in Sources */,
 				CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */,
+				FB61845E25B7E09B00EA1DCC /* StatSectionView.swift in Sources */,
 				FB70C44825AAA0AE004A654E /* DamageRelationView.swift in Sources */,
 				FBB30EA725B5D182006D0594 /* SectionHeaderView.swift in Sources */,
 				CAE61048256E173800A65C3C /* SearchListView.swift in Sources */,

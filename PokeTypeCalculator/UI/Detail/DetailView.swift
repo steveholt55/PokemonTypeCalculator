@@ -18,10 +18,10 @@ struct DetailView: View {
         
         //case bio
         case ability
-        /*
         case form
-        case game
         case stat
+        /*
+        case game
         case move
         */
     }
@@ -32,6 +32,15 @@ struct DetailView: View {
         if pokemon.hasAbilities {
             showableSection.append(.ability)
         }
+        
+        if pokemon.hasStats {
+            showableSection.append(.stat)
+        }
+        
+        if pokemon.hasForms {
+            showableSection.append(.form)
+        }
+        
         return showableSection
     }
     
@@ -50,6 +59,10 @@ struct DetailView: View {
                     switch section {
                     case .ability:
                         AbilitySectionView(pokemon: pokemon)
+                    case .form:
+                        FormSectionView(pokemon: pokemon)
+                    case .stat:
+                        StatSectionView(pokemon: pokemon)
                     }
                 }
             }
