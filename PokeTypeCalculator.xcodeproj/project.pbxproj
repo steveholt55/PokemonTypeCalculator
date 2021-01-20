@@ -23,6 +23,8 @@
 		CAE61045256E173800A65C3C /* TypeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE6103F256E173800A65C3C /* TypeCalculatorView.swift */; };
 		CAE61046256E173800A65C3C /* SearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE61041256E173800A65C3C /* SearchListViewModel.swift */; };
 		CAE61048256E173800A65C3C /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE61043256E173800A65C3C /* SearchListView.swift */; };
+		FB61844425B7D25A00EA1DCC /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844325B7D25A00EA1DCC /* Stat.swift */; };
+		FB61844925B7D66F00EA1DCC /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844825B7D66F00EA1DCC /* Form.swift */; };
 		FB70C43625AAA0A6004A654E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43425AAA0A6004A654E /* SearchBarView.swift */; };
 		FB70C43725AAA0A6004A654E /* SearchItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43525AAA0A6004A654E /* SearchItemRow.swift */; };
 		FB70C44425AAA0AE004A654E /* PokemonSpriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C43D25AAA0AD004A654E /* PokemonSpriteView.swift */; };
@@ -89,6 +91,8 @@
 		CAE6103F256E173800A65C3C /* TypeCalculatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCalculatorView.swift; sourceTree = "<group>"; };
 		CAE61041256E173800A65C3C /* SearchListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewModel.swift; sourceTree = "<group>"; };
 		CAE61043256E173800A65C3C /* SearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
+		FB61844325B7D25A00EA1DCC /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		FB61844825B7D66F00EA1DCC /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		FB70C43425AAA0A6004A654E /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		FB70C43525AAA0A6004A654E /* SearchItemRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemRow.swift; sourceTree = "<group>"; };
 		FB70C43D25AAA0AD004A654E /* PokemonSpriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonSpriteView.swift; sourceTree = "<group>"; };
@@ -302,8 +306,10 @@
 		FBB30E7425B52227006D0594 /* PokemonDetails */ = {
 			isa = PBXGroup;
 			children = (
-				FBB30E7D25B522C2006D0594 /* SpriteImages.swift */,
 				FBB30E7525B52227006D0594 /* Ability.swift */,
+				FB61844825B7D66F00EA1DCC /* Form.swift */,
+				FBB30E7D25B522C2006D0594 /* SpriteImages.swift */,
+				FB61844325B7D25A00EA1DCC /* Stat.swift */,
 			);
 			path = PokemonDetails;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 				FB70C43725AAA0A6004A654E /* SearchItemRow.swift in Sources */,
 				FB70C44925AAA0AE004A654E /* SearchButton.swift in Sources */,
 				FBEA484825AA27AA00C9017E /* Pokemon.swift in Sources */,
+				FB61844425B7D25A00EA1DCC /* Stat.swift in Sources */,
 				CA73F0AF256C2ADE00417092 /* PokemonImageView.swift in Sources */,
 				FB70C44625AAA0AE004A654E /* PokemonHolderView.swift in Sources */,
 				FBEA484B25AA27AA00C9017E /* PokemonType.swift in Sources */,
@@ -487,6 +494,7 @@
 				CAA8E923256AFC8800A4F7C1 /* APIClient.swift in Sources */,
 				FBEA484725AA27AA00C9017E /* ListResponse.swift in Sources */,
 				CAE61045256E173800A65C3C /* TypeCalculatorView.swift in Sources */,
+				FB61844925B7D66F00EA1DCC /* Form.swift in Sources */,
 				FB70C44425AAA0AE004A654E /* PokemonSpriteView.swift in Sources */,
 				FBB30EBA25B68A4C006D0594 /* PokemonOfficialArtView.swift in Sources */,
 				FBB30E7625B52227006D0594 /* Ability.swift in Sources */,

@@ -12,3 +12,9 @@ struct PokemonType: Codable {
         case name = "name"
     }
 }
+
+extension PokemonType {
+    static func mock() -> PokemonType {
+        PokemonType(name: "Fire")
+    }
+}

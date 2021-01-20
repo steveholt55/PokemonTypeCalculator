@@ -14,3 +14,9 @@ struct PokemonTypeHolder: Codable {
         case type   = "type"
     }
 }
+
+extension PokemonTypeHolder {
+    static func mock() -> PokemonTypeHolder {
+        PokemonTypeHolder(slot: 1, type: PokemonType.mock())
+    }
+}

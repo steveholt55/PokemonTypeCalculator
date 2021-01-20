@@ -9,40 +9,36 @@ import Foundation
 
 struct Ability: Codable, Identifiable {
     
-    var id: String {
-        return name
-    }
+    // Identifiable
+    var id: String { name }
     
-    var name: String {
-        _ability.name
-    }
-    var url: URL {
-        _ability.url
-    }
+    // Internal Ability
+    private let ability: AbilityInternal
+    var name: String { ability.name }
+    var url: URL { ability.url }
+    
     let isHidden: Bool
     let slot: Int
     
-    private let _ability: AbilityInternal
-    
     enum CodingKeys: String, CodingKey {
-        case _ability   = "ability"
+        case ability    = "ability"
         case isHidden   = "is_hidden"
         case slot       = "slot"
     }
 }
 
-struct AbilityInternal: Codable {
+private struct AbilityInternal: Codable {
     let name: String
     let url: URL
     
     enum CodingKeys: String, CodingKey {
-        case name       = "name"
-        case url        = "url"
+        case name   = "name"
+        case url    = "url"
     }
 }
 
 extension Ability {
     static func mock() -> Ability {
-        Ability(isHidden: true, slot: 1, _ability: AbilityInternal(name: "limber", url: URL(string: "https://pokeapi.co/api/v2/ability/7/")!))
+        Ability(ability: AbilityInternal(name: "limber", url: URL(string: "https://pokeapi.co/api/v2/ability/7/")!), isHidden: true, slot: 1)
     }
 }
