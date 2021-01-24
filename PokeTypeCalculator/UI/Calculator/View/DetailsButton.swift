@@ -19,10 +19,16 @@ struct DetailsButton: View {
         Button(action: {
             self.showingDetailView.toggle()
         }) {
-            Text("Details")
-                .font(.title3)
-                .fontWeight(.black)
-                .foregroundColor(Color.red)
+            HStack {
+                Image(systemName: "info.circle")
+                    .font(.system(.title))
+                    .foregroundColor(AppColors.red)
+                
+                Text("Details")
+                    .foregroundColor(Color(.label))
+                    .font(.system(.title3))
+                    .fontWeight(.bold)
+            }
         }
         .sheet(isPresented: $showingDetailView) {
             if let pokemon = self.holder.pokemon {

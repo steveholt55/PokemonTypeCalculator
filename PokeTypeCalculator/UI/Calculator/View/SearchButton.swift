@@ -26,7 +26,7 @@ struct SearchButton: View {
                 .foregroundColor(.white)
                 .frame(width: imageSize, height: imageSize)
                 .padding(.all, padding)
-                .background(Color.red)
+                .background(AppColors.red)
                 .cornerRadius((imageSize + padding * 2) / 2.0)
                 .shadow(color: Color.black.opacity(0.3),
                         radius: 3,

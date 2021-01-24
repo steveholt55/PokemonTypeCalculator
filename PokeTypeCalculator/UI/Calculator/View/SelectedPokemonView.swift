@@ -26,7 +26,7 @@ struct SelectedPokemonView: View {
                         .overlay(Text(selectedName.capitalized)
                                     .foregroundColor(.white)
                                     .font(.largeTitle)
-                                    .shadow(radius: 15)
+                                    .fontWeight(.black)
                                     .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4)))
                 }
                 
