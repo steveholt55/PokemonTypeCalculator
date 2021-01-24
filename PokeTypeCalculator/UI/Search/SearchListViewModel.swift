@@ -18,7 +18,7 @@ class SearchListViewModel: ObservableObject {
     var cancellationToken: AnyCancellable?
     
     init() {
-        self.recents = ((UserDefaults.standard.array(forKey: self.recentUserDefaultsKey) as? [String]) ?? []).map { ListItem(name: $0) }
+        self.recents = ((UserDefaults.standard.array(forKey: self.recentUserDefaultsKey) as? [String]) ?? []).map { ListItem(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/69.png")!, name: $0) }
         getList()
     }
     

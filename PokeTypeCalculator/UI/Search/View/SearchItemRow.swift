@@ -12,16 +12,21 @@ struct SearchItemRow: View {
     @State var item: ListItem
     
     var body: some View {
-        Text(item.name.capitalized)
-            .padding(.horizontal, 8.0)
-            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-            .font(.title3)
-            .background(Color(UIColor.secondarySystemGroupedBackground)) // Hack to make full row clickable instead of just the text
+        HStack {
+            if let url = item.imageURL {
+                PokemonImageView(url: url, imageHeight: 34)
+            }
+            Text(item.name.capitalized)
+                .padding(.horizontal, 8.0)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .font(.title3)
+                .background(Color(UIColor.secondarySystemGroupedBackground)) // Hack to make full row clickable instead of just the text
+        }
     }
 }
 
 struct SearchItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        SearchItemRow(item: ListItem(name: "Charizard"))
+        SearchItemRow(item: ListItem(url: URL(string: "www.google.com")!, name: "Charizard"))
     }
 }

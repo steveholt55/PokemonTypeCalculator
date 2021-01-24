@@ -41,6 +41,7 @@
 		FB70C44825AAA0AE004A654E /* DamageRelationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C44125AAA0AE004A654E /* DamageRelationView.swift */; };
 		FB70C44925AAA0AE004A654E /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C44225AAA0AE004A654E /* SearchButton.swift */; };
 		FBAD418125BBC4A90062CD00 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD418025BBC4A90062CD00 /* Language.swift */; };
+		FBAD418625BD2EDB0062CD00 /* SimpleImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD418525BD2EDB0062CD00 /* SimpleImageCache.swift */; };
 		FBB30E7625B52227006D0594 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E7525B52227006D0594 /* Ability.swift */; };
 		FBB30E7E25B522C2006D0594 /* SpriteImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E7D25B522C2006D0594 /* SpriteImages.swift */; };
 		FBB30E8625B522CC006D0594 /* TypeDescriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E8325B522CC006D0594 /* TypeDescriptionSection.swift */; };
@@ -117,6 +118,7 @@
 		FB70C44125AAA0AE004A654E /* DamageRelationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageRelationView.swift; sourceTree = "<group>"; };
 		FB70C44225AAA0AE004A654E /* SearchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		FBAD418025BBC4A90062CD00 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		FBAD418525BD2EDB0062CD00 /* SimpleImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleImageCache.swift; sourceTree = "<group>"; };
 		FBB30E7525B52227006D0594 /* Ability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
 		FBB30E7D25B522C2006D0594 /* SpriteImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteImages.swift; sourceTree = "<group>"; };
 		FBB30E8325B522CC006D0594 /* TypeDescriptionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDescriptionSection.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				CA0EB7992567721E00981380 /* UIColor+Hex.swift */,
 				CA73F0B3256C2B0600417092 /* ImageLoader.swift */,
+				FBAD418525BD2EDB0062CD00 /* SimpleImageCache.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				CA7D8135256CA81B00D0AABA /* LoadingView.swift in Sources */,
 				FBEA484625AA27AA00C9017E /* ListItem.swift in Sources */,
 				FBB30EB225B5D647006D0594 /* AbilitySectionView.swift in Sources */,
+				FBAD418625BD2EDB0062CD00 /* SimpleImageCache.swift in Sources */,
 				FB61846B25B7E22C00EA1DCC /* FormSectionView.swift in Sources */,
 				FBEA484A25AA27AA00C9017E /* PokemonTypeHolder.swift in Sources */,
 				FBB30E9625B52624006D0594 /* DetailView.swift in Sources */,

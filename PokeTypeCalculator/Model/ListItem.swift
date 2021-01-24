@@ -8,11 +8,23 @@
 import Foundation
 
 struct ListItem: Codable, Identifiable {
+    
     var id = UUID()
+    let url: URL
     let name: String
 
+    private var number: Int? {
+        return Int(url.lastPathComponent)
+    }
+    
+    var imageURL: URL? {
+        guard let number = number else { return nil }
+        return URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/\(number).png")
+    }
+    
     enum CodingKeys: String, CodingKey {
         case name = "name"
+        case url = "url"
     }
 }
 

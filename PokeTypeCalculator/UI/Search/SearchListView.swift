@@ -60,16 +60,18 @@ struct SearchListView: View {
 
 struct SearchListView_Previews: PreviewProvider {
     static var previews: some View {
+        let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/60.png")!
+        
         let view = SearchListView()
         view.viewModel.recents = [
-            ListItem(name: "Taco"),
-            ListItem(name: "Milk"),
+            ListItem(url: url, name: "Taco"),
+            ListItem(url: url, name: "Milk"),
         ]
         view.viewModel.list = [
-            ListItem(name: "Charizard"),
-            ListItem(name: "Pikachu"),
-            ListItem(name: "Mewtwo"),
-            ListItem(name: "Absol"),
+            ListItem(url: url, name: "Charizard"),
+            ListItem(url: url, name: "Pikachu"),
+            ListItem(url: url, name: "Mewtwo"),
+            ListItem(url: url, name: "Absol"),
         ]
         return view
     }
