@@ -16,7 +16,7 @@ struct PokemonHolderView: View {
             VStack {
                 
                 SelectedPokemonView(holder: self.holder)
-                    .frame(maxHeight: 50)
+                    .frame(maxWidth: .infinity, maxHeight: 50)
                 
                 if let officialArtImage = self.holder.pokemon?.sprites.officialArtImageURL {
                     PokemonOfficialArtView(imageURL: officialArtImage)
@@ -32,7 +32,6 @@ struct PokemonHolderView: View {
                     }
                     
                 }
-                
         }
     }
 }

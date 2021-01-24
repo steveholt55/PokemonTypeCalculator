@@ -14,11 +14,23 @@ struct SelectedPokemonView: View {
     var body: some View {
         
         if let selectedName = holder.pokemon?.name {
-            Text(selectedName.capitalized)
-                .foregroundColor(Color(.label))
-                .font(.largeTitle)
-                .shadow(radius: 15)
-                .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
+            ZStack {
+                
+                if let primaryType = holder.primaryType.type {
+                    Ellipse()
+                        .trim(from: 0, to: 0.5)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                        .offset(y: -100)
+                        .foregroundColor(primaryType.color)
+                        .shadow(radius: 1)
+                        .overlay(Text(selectedName.capitalized)
+                                    .foregroundColor(.white)
+                                    .font(.largeTitle)
+                                    .shadow(radius: 15)
+                                    .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4)))
+                }
+                
+            }.scaledToFill()
         } else {
             LoadingView()
         }
