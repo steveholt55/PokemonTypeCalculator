@@ -19,16 +19,25 @@ struct PokemonImageView: View {
     }
     
     var body: some View {
-        Image(uiImage: image)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(height:self.imageHeight)
-            .onReceive(imageLoader.didChange) { image in
-                self.image = image
+        
+        ZStack {
+            
+            Image(uiImage: image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height:self.imageHeight)
+                .onReceive(imageLoader.didChange) { image in
+                    self.image = image
+                }
+                .onAppear() {
+                    self.image = self.imageLoader.image
+                }
+            
+            // Show loading indicator if image isn't loaded yet
+            if image == UIImage() {
+                LoadingView()
             }
-            .onAppear() {
-                self.image = self.imageLoader.image
-            }
+        }
     }
 }
 
