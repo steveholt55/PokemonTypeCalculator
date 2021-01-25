@@ -15,10 +15,5 @@ struct Language: Codable {
     
     let name: String
     let url: URL
-    
-    enum CodingKeys: String, CodingKey {
-        case name   = "name"
-        case url    = "url"
-    }
 }
 

@@ -10,12 +10,21 @@ import SwiftUI
 struct SectionHeaderView: View {
     
     let headerText: String
+    var textColor: Color = .black
     
     var body: some View {
-        Text(headerText.capitalized)
-            .textCase(nil)
-            .font(.headline)
-            .padding(.all, 8.0)
+        HStack {
+            
+            Text(headerText.capitalized)
+                .foregroundColor(textColor)
+                .font(.headline)
+                .fontWeight(.bold)
+                .textCase(nil)
+                .padding(.all, 8.0)
+            
+            // Make it full width
+            Spacer()
+        }
     }
 }
 

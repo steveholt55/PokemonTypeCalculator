@@ -11,6 +11,8 @@ struct AbilityRowView: View {
     
     let ability: Ability
     
+    @State var showingDetailView = false
+    
     var body: some View {
         
         HStack {
@@ -24,6 +26,11 @@ struct AbilityRowView: View {
                     .font(.footnote)
             }
             
+        }.onTapGesture {
+            self.showingDetailView.toggle()
+        }
+        .sheet(isPresented: $showingDetailView) {
+            AbilityDetailView(ability: self.ability)
         }
     }
 }

@@ -25,10 +25,12 @@ struct PokemonHolderView: View {
                 HStack(spacing: 0) {
                     if let primaryType = self.holder.primaryType.type {
                         TypeBadgeView(type: primaryType)
+                            .padding(.horizontal, 8.0)
                     }
                     
                     if let secondaryType = self.holder.secondaryType.type {
                         TypeBadgeView(type: secondaryType)
+                            .padding(.horizontal, 8.0)
                     }
                     
                 }

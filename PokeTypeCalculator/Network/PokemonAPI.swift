@@ -45,4 +45,13 @@ extension PokemonAPI {
             .eraseToAnyPublisher()
     }
     
+    static func getAbilityDetails(_ ability: Ability) -> AnyPublisher<AbilityDetails, Error> {
+        
+        let request = URLRequest(url: ability.url)
+        
+        return apiClient.run(request)
+            .map(\.value)
+            .eraseToAnyPublisher()
+    }
+    
 }

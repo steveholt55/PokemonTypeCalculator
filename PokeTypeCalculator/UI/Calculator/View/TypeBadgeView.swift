@@ -24,7 +24,6 @@ struct TypeBadgeView: View {
                 .fontWeight(.bold)
             
         }
-        .padding(.horizontal, 8.0)
     }
 }
 
