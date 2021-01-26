@@ -30,7 +30,7 @@ struct AbilityRowView: View {
             self.showingDetailView.toggle()
         }
         .sheet(isPresented: $showingDetailView) {
-            AbilityDetailView(ability: self.ability)
+            AbilityDetailView(viewModel: AbilityDetailsViewModel(self.ability))
         }
     }
 }

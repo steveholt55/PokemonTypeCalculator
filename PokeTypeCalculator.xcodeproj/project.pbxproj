@@ -47,6 +47,7 @@
 		FBAD419825BE88FB0062CD00 /* AbilityEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD419725BE88FB0062CD00 /* AbilityEffect.swift */; };
 		FBAD419D25BE89750062CD00 /* AbilityDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD419C25BE89750062CD00 /* AbilityDetails.swift */; };
 		FBAD41A325BE8AC20062CD00 /* AbilityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41A225BE8AC20062CD00 /* AbilityDetailView.swift */; };
+		FBAD41AB25BFC37D0062CD00 /* AbilityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41AA25BFC37D0062CD00 /* AbilityDetailsViewModel.swift */; };
 		FBB30E7625B52227006D0594 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E7525B52227006D0594 /* Ability.swift */; };
 		FBB30E7E25B522C2006D0594 /* SpriteImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E7D25B522C2006D0594 /* SpriteImages.swift */; };
 		FBB30E8625B522CC006D0594 /* TypeDescriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E8325B522CC006D0594 /* TypeDescriptionSection.swift */; };
@@ -129,6 +130,7 @@
 		FBAD419725BE88FB0062CD00 /* AbilityEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffect.swift; sourceTree = "<group>"; };
 		FBAD419C25BE89750062CD00 /* AbilityDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetails.swift; sourceTree = "<group>"; };
 		FBAD41A225BE8AC20062CD00 /* AbilityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetailView.swift; sourceTree = "<group>"; };
+		FBAD41AA25BFC37D0062CD00 /* AbilityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetailsViewModel.swift; sourceTree = "<group>"; };
 		FBB30E7525B52227006D0594 /* Ability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
 		FBB30E7D25B522C2006D0594 /* SpriteImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteImages.swift; sourceTree = "<group>"; };
 		FBB30E8325B522CC006D0594 /* TypeDescriptionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDescriptionSection.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				FBAD41A225BE8AC20062CD00 /* AbilityDetailView.swift */,
+				FBAD41AA25BFC37D0062CD00 /* AbilityDetailsViewModel.swift */,
 			);
 			path = Ability;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				FB70C44725AAA0AE004A654E /* TypeBadgeView.swift in Sources */,
 				FBB30E7E25B522C2006D0594 /* SpriteImages.swift in Sources */,
 				FB61847E25B7F8D500EA1DCC /* BioRowView.swift in Sources */,
+				FBAD41AB25BFC37D0062CD00 /* AbilityDetailsViewModel.swift in Sources */,
 				CAA8E92B256AFCD500A4F7C1 /* PokemonAPI.swift in Sources */,
 				FB70C43725AAA0A6004A654E /* SearchItemRow.swift in Sources */,
 				FB70C44925AAA0AE004A654E /* SearchButton.swift in Sources */,

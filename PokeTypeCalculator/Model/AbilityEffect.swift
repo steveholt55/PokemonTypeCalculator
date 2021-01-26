@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct AbilityEffect: Codable {
+struct AbilityEffect: Codable, Identifiable {
+    let id = UUID()
     let effect: String
     let language: Language
     let shortEffect: String
