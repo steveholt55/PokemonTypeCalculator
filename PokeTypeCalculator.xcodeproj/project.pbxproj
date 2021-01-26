@@ -48,6 +48,11 @@
 		FBAD419D25BE89750062CD00 /* AbilityDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD419C25BE89750062CD00 /* AbilityDetails.swift */; };
 		FBAD41A325BE8AC20062CD00 /* AbilityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41A225BE8AC20062CD00 /* AbilityDetailView.swift */; };
 		FBAD41AB25BFC37D0062CD00 /* AbilityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41AA25BFC37D0062CD00 /* AbilityDetailsViewModel.swift */; };
+		FBAD41B025BFC9500062CD00 /* AbilityEffectChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41AF25BFC9500062CD00 /* AbilityEffectChanges.swift */; };
+		FBAD41B625BFCD680062CD00 /* AbilityEffectChangesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41B525BFCD680062CD00 /* AbilityEffectChangesSection.swift */; };
+		FBAD41BE25BFCD990062CD00 /* AbilityEffectChangeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41BD25BFCD990062CD00 /* AbilityEffectChangeRow.swift */; };
+		FBAD41C325BFD15B0062CD00 /* AbilityEffectEntrySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41C225BFD15B0062CD00 /* AbilityEffectEntrySection.swift */; };
+		FBAD41C825BFD1660062CD00 /* AbilityEffectEntryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41C725BFD1660062CD00 /* AbilityEffectEntryRow.swift */; };
 		FBB30E7625B52227006D0594 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E7525B52227006D0594 /* Ability.swift */; };
 		FBB30E7E25B522C2006D0594 /* SpriteImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E7D25B522C2006D0594 /* SpriteImages.swift */; };
 		FBB30E8625B522CC006D0594 /* TypeDescriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E8325B522CC006D0594 /* TypeDescriptionSection.swift */; };
@@ -131,6 +136,11 @@
 		FBAD419C25BE89750062CD00 /* AbilityDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetails.swift; sourceTree = "<group>"; };
 		FBAD41A225BE8AC20062CD00 /* AbilityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetailView.swift; sourceTree = "<group>"; };
 		FBAD41AA25BFC37D0062CD00 /* AbilityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetailsViewModel.swift; sourceTree = "<group>"; };
+		FBAD41AF25BFC9500062CD00 /* AbilityEffectChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffectChanges.swift; sourceTree = "<group>"; };
+		FBAD41B525BFCD680062CD00 /* AbilityEffectChangesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffectChangesSection.swift; sourceTree = "<group>"; };
+		FBAD41BD25BFCD990062CD00 /* AbilityEffectChangeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffectChangeRow.swift; sourceTree = "<group>"; };
+		FBAD41C225BFD15B0062CD00 /* AbilityEffectEntrySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffectEntrySection.swift; sourceTree = "<group>"; };
+		FBAD41C725BFD1660062CD00 /* AbilityEffectEntryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffectEntryRow.swift; sourceTree = "<group>"; };
 		FBB30E7525B52227006D0594 /* Ability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
 		FBB30E7D25B522C2006D0594 /* SpriteImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteImages.swift; sourceTree = "<group>"; };
 		FBB30E8325B522CC006D0594 /* TypeDescriptionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDescriptionSection.swift; sourceTree = "<group>"; };
@@ -252,6 +262,7 @@
 				FBAD419225BE88800062CD00 /* Generation.swift */,
 				FBAD419725BE88FB0062CD00 /* AbilityEffect.swift */,
 				FBAD419C25BE89750062CD00 /* AbilityDetails.swift */,
+				FBAD41AF25BFC9500062CD00 /* AbilityEffectChanges.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,10 +353,22 @@
 		FBAD41A125BE8AB40062CD00 /* Ability */ = {
 			isa = PBXGroup;
 			children = (
+				FBAD41B425BFCD490062CD00 /* View */,
 				FBAD41A225BE8AC20062CD00 /* AbilityDetailView.swift */,
 				FBAD41AA25BFC37D0062CD00 /* AbilityDetailsViewModel.swift */,
 			);
 			path = Ability;
+			sourceTree = "<group>";
+		};
+		FBAD41B425BFCD490062CD00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBAD41B525BFCD680062CD00 /* AbilityEffectChangesSection.swift */,
+				FBAD41BD25BFCD990062CD00 /* AbilityEffectChangeRow.swift */,
+				FBAD41C225BFD15B0062CD00 /* AbilityEffectEntrySection.swift */,
+				FBAD41C725BFD1660062CD00 /* AbilityEffectEntryRow.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FBB30E7425B52227006D0594 /* PokemonDetails */ = {
@@ -524,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBAD41BE25BFCD990062CD00 /* AbilityEffectChangeRow.swift in Sources */,
 				FBB30E8625B522CC006D0594 /* TypeDescriptionSection.swift in Sources */,
 				CA0EB75A2567714700981380 /* PokeTypeCalculatorApp.swift in Sources */,
 				FBB30E8725B522CC006D0594 /* DamageRelationCalculation.swift in Sources */,
@@ -539,6 +563,7 @@
 				FB61844425B7D25A00EA1DCC /* Stat.swift in Sources */,
 				CA73F0AF256C2ADE00417092 /* PokemonImageView.swift in Sources */,
 				FB70C44625AAA0AE004A654E /* PokemonHolderView.swift in Sources */,
+				FBAD41C325BFD15B0062CD00 /* AbilityEffectEntrySection.swift in Sources */,
 				FBEA484B25AA27AA00C9017E /* PokemonType.swift in Sources */,
 				CA7D8135256CA81B00D0AABA /* LoadingView.swift in Sources */,
 				FBEA484625AA27AA00C9017E /* ListItem.swift in Sources */,
@@ -561,6 +586,7 @@
 				FBB30EBA25B68A4C006D0594 /* PokemonOfficialArtView.swift in Sources */,
 				FBB30E7625B52227006D0594 /* Ability.swift in Sources */,
 				CAE61046256E173800A65C3C /* SearchListViewModel.swift in Sources */,
+				FBAD41B625BFCD680062CD00 /* AbilityEffectChangesSection.swift in Sources */,
 				CA0EB794256771DB00981380 /* Type.swift in Sources */,
 				CA73F0B4256C2B0600417092 /* ImageLoader.swift in Sources */,
 				FB61847625B7F71E00EA1DCC /* PokemonSpriteView.swift in Sources */,
@@ -569,12 +595,14 @@
 				CAA8E950256B23D000A4F7C1 /* PokemonHolder.swift in Sources */,
 				FB61846625B7E22400EA1DCC /* FormRowView.swift in Sources */,
 				FB61848B25B7FBFD00EA1DCC /* BioItem.swift in Sources */,
+				FBAD41B025BFC9500062CD00 /* AbilityEffectChanges.swift in Sources */,
 				FB61848325B7F8DD00EA1DCC /* BioSectionView.swift in Sources */,
 				FBB30E8825B522CC006D0594 /* DamageRelation.swift in Sources */,
 				CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */,
 				FB61845E25B7E09B00EA1DCC /* StatSectionView.swift in Sources */,
 				FB70C44825AAA0AE004A654E /* DamageRelationView.swift in Sources */,
 				FBAD418E25BD3A6E0062CD00 /* AppColors.swift in Sources */,
+				FBAD41C825BFD1660062CD00 /* AbilityEffectEntryRow.swift in Sources */,
 				FBB30EA725B5D182006D0594 /* SectionHeaderView.swift in Sources */,
 				CAE61048256E173800A65C3C /* SearchListView.swift in Sources */,
 			);

@@ -8,10 +8,21 @@
 import Foundation
 
 struct AbilityDetails: Codable {
+    let effectChanges: [AbilityEffectChanges]
     let effectEntries: [AbilityEffect]
     
-    enum CodingKeys: String, CodingKey {
-        case effectEntries    = "effect_entries"
+    func getEffectChanges() -> [AbilityEffectChanges] {
+        self.effectChanges.filter { $0.getEffectEntries().count > 0 }
     }
     
+    func getEffectEntries() -> [AbilityEffect] {
+        self.effectEntries.filter { $0.language.isCurrentLocaleOrDefault() }
+    }
+}
+
+extension AbilityDetails {
+    enum CodingKeys: String, CodingKey {
+        case effectChanges    = "effect_changes"
+        case effectEntries    = "effect_entries"
+    }
 }

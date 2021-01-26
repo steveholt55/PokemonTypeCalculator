@@ -11,16 +11,46 @@ struct AbilityDetailView: View {
     
     @ObservedObject var viewModel: AbilityDetailsViewModel
     
+    enum DetailSection: String, Identifiable {
+        var id: String {
+            self.rawValue
+        }
+        
+        case effectChanges
+        case effectEntries
+    }
+    
+    var sections: [DetailSection] {
+        guard let abilityDetails = self.viewModel.abilityDetails else { return [] }
+        
+        var showableSection: [DetailSection] = []
+        
+        if abilityDetails.getEffectChanges().count > 0 {
+            showableSection.append(.effectChanges)
+        }
+        
+        if abilityDetails.getEffectEntries().count > 0 {
+            showableSection.append(.effectEntries)
+        }
+        
+        return showableSection
+    }
+    
     var body: some View {
-        if let details = self.viewModel.abilityDetails {
-            ForEach(details.effectEntries) { ability in
-                Text(ability.effect.capitalized)
-                    .foregroundColor(Color(.label))
-                    .font(.largeTitle)
-                    .shadow(radius: 15)
-                    .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
+        
+        if let abilityDetails = self.viewModel.abilityDetails  {
+            List {
+                ForEach(self.sections) { section in
+                    switch section {
+                    case .effectChanges:
+                        AbilityEffectChangesSection(effectChanges: abilityDetails.getEffectChanges())
+                    case .effectEntries:
+                        AbilityEffectEntrySection(effectEntries: abilityDetails.getEffectEntries())
+                    }
+                }
             }
-            
+        } else {
+            LoadingView()
         }
     }
 }

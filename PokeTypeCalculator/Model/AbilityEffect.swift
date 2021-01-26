@@ -11,12 +11,17 @@ struct AbilityEffect: Codable, Identifiable {
     let id = UUID()
     let effect: String
     let language: Language
-    let shortEffect: String
+    let shortEffect: String?
     
     enum CodingKeys: String, CodingKey {
         case effect
         case language
         case shortEffect    = "short_effect"
     }
-    
+}
+
+extension AbilityEffect {
+    static func mock() -> AbilityEffect {
+        AbilityEffect(effect: "Test", language: Language.mock(), shortEffect: "Short Test")
+    }
 }
