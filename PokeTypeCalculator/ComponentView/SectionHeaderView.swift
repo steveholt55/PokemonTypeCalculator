@@ -10,7 +10,7 @@ import SwiftUI
 struct SectionHeaderView: View {
     
     let headerText: String
-    var textColor: Color = .black
+    var textColor: Color = Color(.label)
     
     var body: some View {
         HStack {
