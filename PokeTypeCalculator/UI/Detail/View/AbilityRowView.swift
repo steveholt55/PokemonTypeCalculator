@@ -26,7 +26,12 @@ struct AbilityRowView: View {
                     .font(.footnote)
             }
             
-        }.onTapGesture {
+            Spacer()
+            
+            Image(systemName: "chevron.right")
+        }
+        .background(Color(UIColor.secondarySystemGroupedBackground))
+        .onTapGesture {
             self.showingDetailView.toggle()
         }
         .sheet(isPresented: $showingDetailView) {
