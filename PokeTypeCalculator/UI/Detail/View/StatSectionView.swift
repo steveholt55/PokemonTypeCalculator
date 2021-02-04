@@ -10,11 +10,12 @@ import SwiftUI
 struct StatSectionView: View {
     
     @State var pokemon: Pokemon
+    @State var primaryColor: Color = AppColors.red
     
     var body: some View {
         Section(header: SectionHeaderView(headerText: "Stats")) {
             ForEach(pokemon.stats) { stat in
-                StatRowView(stat: stat)
+                StatRowView(stat: stat, primaryColor: self.primaryColor)
             }
         }
     }

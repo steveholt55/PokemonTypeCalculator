@@ -16,6 +16,23 @@ struct Stat: Codable, Identifiable {
         case specialAttack = "special-attack"
         case specialDefense = "special-defense"
         case speed
+        
+        func maxValue() -> Int {
+            switch self {
+            case .hp:
+                return 255
+            case .attack:
+                return 190
+            case .defense:
+                return 250
+            case .specialAttack:
+                return 194
+            case .specialDefense:
+                return 250
+            case .speed:
+                return 200
+            }
+        }
     }
     
     // Identifiable

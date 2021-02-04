@@ -30,7 +30,6 @@ struct AbilityRowView: View {
             
             Image(systemName: "chevron.right")
         }
-        .background(Color(UIColor.secondarySystemGroupedBackground))
         .onTapGesture {
             self.showingDetailView.toggle()
         }

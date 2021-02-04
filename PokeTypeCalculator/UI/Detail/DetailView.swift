@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
     
     @State var pokemon: Pokemon
+    @State var primaryColor: Color = AppColors.red
     
     enum DetailSection: String, Identifiable {
         var id: String {
@@ -48,15 +49,20 @@ struct DetailView: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: 0) {
             
-            Text(pokemon.name.capitalized)
-                .foregroundColor(Color(.label))
-                .font(.largeTitle)
-                .shadow(radius: 15)
-                .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
-            
-            PokemonSpriteView(pokemon: pokemon)
+            VStack {
+                Text(pokemon.name.capitalized)
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .shadow(radius: 15)
+                    .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
+                
+                PokemonSpriteView(pokemon: pokemon)
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(self.primaryColor)
             
             List {
                 ForEach(self.sections) { section in
@@ -68,7 +74,7 @@ struct DetailView: View {
                     case .form:
                         FormSectionView(pokemon: pokemon)
                     case .stat:
-                        StatSectionView(pokemon: pokemon)
+                        StatSectionView(pokemon: pokemon, primaryColor: self.primaryColor)
                     }
                 }
             }

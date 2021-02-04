@@ -31,8 +31,8 @@ struct DetailsButton: View {
             }
         }
         .sheet(isPresented: $showingDetailView) {
-            if let pokemon = self.holder.pokemon {
-                DetailView(pokemon: pokemon)
+            if let pokemon = self.holder.pokemon, let color = holder.primaryType.type?.color {
+                DetailView(pokemon: pokemon, primaryColor: color)
             }
         }
         
