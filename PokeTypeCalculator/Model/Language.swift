@@ -18,12 +18,12 @@ struct Language: Codable {
     
     /// Check if Language is of user's Locale
     func isCurrentLocale() -> Bool {
-        self.locale.identifier == Locale.current.identifier
+        self.locale.languageCode == Locale.current.languageCode
     }
     
     /// Check if Language is of user's Locale or of the default Locale (en)
     func isCurrentLocaleOrDefault() -> Bool {
-        self.isCurrentLocale() || self.locale.identifier == Locale(identifier: "us").identifier
+        self.isCurrentLocale() || self.locale.languageCode == Locale(identifier: "us").languageCode
     }
 }
 
