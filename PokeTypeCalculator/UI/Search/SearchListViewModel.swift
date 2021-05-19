@@ -14,14 +14,12 @@ class SearchListViewModel: ObservableObject {
     
     @Published var recents: [ListItem] = []
     @Published var list: [ListItem] = []
-    let holder: PokemonHolder
     
     let itemSelectedSubject = PassthroughSubject<ListItem, Never>()
     
     var cancellationToken: AnyCancellable?
     
-    init(holder: PokemonHolder) {
-        self.holder = holder
+    init() {
         self.recents = ((UserDefaults.standard.array(forKey: self.recentUserDefaultsKey) as? [String]) ?? []).map { ListItem(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/69.png")!, name: $0) }
         getList()
     }

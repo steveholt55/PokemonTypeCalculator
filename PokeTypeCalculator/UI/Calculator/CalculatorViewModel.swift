@@ -13,6 +13,8 @@ class CalculatorViewModel: ObservableObject {
     @ObservedObject var primaryType: TypeHolder = TypeHolder()
     @ObservedObject var secondaryType: TypeHolder = TypeHolder()
     
+    let showSearchViewSubject = PassthroughSubject<Bool, Never>()
+    
     var cancellationToken: AnyCancellable?
     
     var name: String? {
@@ -27,6 +29,8 @@ class CalculatorViewModel: ObservableObject {
         }
     }
     
+    @Published var officialArtImage: URL? = nil
+    
     @Published var pokemon: Pokemon? {
         didSet {
             if let pokemon = pokemon {
@@ -35,6 +39,7 @@ class CalculatorViewModel: ObservableObject {
                 
                 self.primaryType.type = primary
                 self.secondaryType.type = secondary
+                self.officialArtImage = pokemon.sprites.officialArtImageURL
             }
         }
     }

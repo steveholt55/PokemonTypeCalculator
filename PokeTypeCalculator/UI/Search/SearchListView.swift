@@ -28,7 +28,7 @@ struct SearchListView: View {
                         ForEach(viewModel.recents) { item in
                             SearchItemRow(item: item)
                                 .onTapGesture {
-                                   // self.viewModel.itemSelectedSubject(item)
+                                    self.viewModel.itemSelectedSubject.send(item)
                                 }
                         }
                     }
@@ -39,7 +39,7 @@ struct SearchListView: View {
                         ForEach(filteredItems) { item in
                             SearchItemRow(item: item)
                                 .onTapGesture {
-                                   // self.viewModel.itemSelectedSubject(item)
+                                    self.viewModel.itemSelectedSubject.send(item)
                                 }
                         }
                     }
@@ -55,7 +55,7 @@ struct SearchListView_Previews: PreviewProvider {
     static var previews: some View {
         let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/60.png")!
         
-        let view = SearchListView(viewModel: SearchListViewModel(holder: PokemonHolder.mock()))
+        let view = SearchListView(viewModel: SearchListViewModel())
         view.viewModel.recents = [
             ListItem(url: url, name: "Taco"),
             ListItem(url: url, name: "Milk"),

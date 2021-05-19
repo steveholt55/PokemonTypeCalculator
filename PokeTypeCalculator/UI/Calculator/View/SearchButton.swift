@@ -9,9 +9,7 @@ import SwiftUI
 import Combine
 
 struct SearchButton: View {
-    
-    @ObservedObject var holder: PokemonHolder
-    
+        
     let padding: CGFloat = 12
     let imageSize: CGFloat = 32
     let showSearchViewSubject: PassthroughSubject<Bool, Never>
@@ -38,7 +36,7 @@ struct SearchButton: View {
 
 struct SearchButton_Previews: PreviewProvider {
     static var previews: some View {
-        SearchButton(holder: PokemonHolder.mock(), showSearchViewSubject: PassthroughSubject<Bool, Never>())
+        SearchButton(showSearchViewSubject: PassthroughSubject<Bool, Never>())
     }
 }
 

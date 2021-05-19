@@ -18,7 +18,7 @@ struct PokemonHolderView: View {
                 SelectedPokemonView(viewModel: self.viewModel)
                     .frame(maxWidth: .infinity, maxHeight: 50)
                 
-                if let officialArtImage = self.viewModel.pokemon?.sprites.officialArtImageURL {
+                if let officialArtImage = self.viewModel.officialArtImage {
                     PokemonOfficialArtView(imageURL: officialArtImage)
                 }
                 
@@ -32,7 +32,6 @@ struct PokemonHolderView: View {
                         TypeBadgeView(type: secondaryType)
                             .padding(.horizontal, 8.0)
                     }
-                    
                 }
         }
     }

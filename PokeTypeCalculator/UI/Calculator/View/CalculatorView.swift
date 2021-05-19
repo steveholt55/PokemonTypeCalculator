@@ -47,10 +47,9 @@ struct CalculatorView: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        Color.red.frame(width: 40, height: 40)
-//                        SearchButton(holder: self.viewModel, showSearchViewSubject: )
-//                            .padding(.trailing, 16.0)
-//                            .padding(.bottom, 8.0)
+                        SearchButton(showSearchViewSubject: self.viewModel.showSearchViewSubject)
+                            .padding(.trailing, 16.0)
+                            .padding(.bottom, 8.0)
                     }
                 }
             }
