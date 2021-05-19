@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailsButton: View {
     
-    @ObservedObject var holder: PokemonHolder
+    @ObservedObject var viewModel: CalculatorViewModel
     @State var showingDetailView = false
     
     let padding: CGFloat = 12
@@ -31,7 +31,7 @@ struct DetailsButton: View {
             }
         }
         .sheet(isPresented: $showingDetailView) {
-            if let pokemon = self.holder.pokemon, let color = holder.primaryType.type?.color {
+            if let pokemon = self.viewModel.pokemon, let color = viewModel.primaryType.type?.color {
                 DetailView(pokemon: pokemon, primaryColor: color)
             }
         }
@@ -42,6 +42,6 @@ struct DetailsButton: View {
 
 struct DetailsButton_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsButton(holder: PokemonHolder.mock())
+        DetailsButton(viewModel: CalculatorViewModel())
     }
 }

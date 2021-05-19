@@ -9,14 +9,14 @@ import SwiftUI
 
 struct SelectedPokemonView: View {
     
-    @ObservedObject var holder: PokemonHolder
+    @ObservedObject var viewModel: CalculatorViewModel
     
     var body: some View {
         
-        if let selectedName = holder.pokemon?.name {
+        if let selectedName = viewModel.pokemon?.name {
             ZStack {
                 
-                if let primaryType = holder.primaryType.type {
+                if let primaryType = viewModel.primaryType.type {
                     Ellipse()
                         .trim(from: 0, to: 0.5)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
@@ -39,6 +39,6 @@ struct SelectedPokemonView: View {
 
 struct SelectedPokemonView_Previews: PreviewProvider {
     static var previews: some View {
-        return SelectedPokemonView(holder: PokemonHolder.mock())
+        return SelectedPokemonView(viewModel: CalculatorViewModel())
     }
 }
