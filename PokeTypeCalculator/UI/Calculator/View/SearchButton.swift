@@ -6,20 +6,18 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SearchButton: View {
-    
-    @ObservedObject var holder: PokemonHolder
-    @State var showingSearchView = false
-    
+        
     let padding: CGFloat = 12
     let imageSize: CGFloat = 32
+    let showSearchViewSubject: PassthroughSubject<Bool, Never>
     
     var body: some View {
         
-        
         Button(action: {
-            self.showingSearchView.toggle()
+            self.showSearchViewSubject.send(true)
         }) {
             Image(systemName:  "magnifyingglass")
                 .resizable()
@@ -33,17 +31,12 @@ struct SearchButton: View {
                         x: 3,
                         y: 3)
         }
-        .sheet(isPresented: $showingSearchView) {
-            SearchListView()
-                .environmentObject(holder)
-        }
-        
     }
 }
 
 struct SearchButton_Previews: PreviewProvider {
     static var previews: some View {
-        SearchButton(holder: PokemonHolder.mock())
+        SearchButton(showSearchViewSubject: PassthroughSubject<Bool, Never>())
     }
 }
 

@@ -3,26 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA0EB75A2567714700981380 /* PokeTypeCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7592567714700981380 /* PokeTypeCalculatorApp.swift */; };
 		CA0EB75E2567714D00981380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0EB75D2567714D00981380 /* Assets.xcassets */; };
 		CA0EB7612567714D00981380 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0EB7602567714D00981380 /* Preview Assets.xcassets */; };
 		CA0EB76C2567714D00981380 /* PokeTypeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB76B2567714D00981380 /* PokeTypeCalculatorTests.swift */; };
 		CA0EB7772567714D00981380 /* PokeTypeCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7762567714D00981380 /* PokeTypeCalculatorUITests.swift */; };
 		CA0EB794256771DB00981380 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB793256771DB00981380 /* Type.swift */; };
-		CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0EB7992567721E00981380 /* UIColor+Hex.swift */; };
 		CA73F0AF256C2ADE00417092 /* PokemonImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73F0AE256C2ADE00417092 /* PokemonImageView.swift */; };
-		CA73F0B4256C2B0600417092 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73F0B3256C2B0600417092 /* ImageLoader.swift */; };
 		CA7D8135256CA81B00D0AABA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7D8134256CA81B00D0AABA /* LoadingView.swift */; };
 		CAA8E923256AFC8800A4F7C1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8E922256AFC8800A4F7C1 /* APIClient.swift */; };
 		CAA8E92B256AFCD500A4F7C1 /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8E92A256AFCD500A4F7C1 /* PokemonAPI.swift */; };
 		CAA8E950256B23D000A4F7C1 /* PokemonHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8E94F256B23D000A4F7C1 /* PokemonHolder.swift */; };
-		CAE61045256E173800A65C3C /* TypeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE6103F256E173800A65C3C /* TypeCalculatorView.swift */; };
 		CAE61046256E173800A65C3C /* SearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE61041256E173800A65C3C /* SearchListViewModel.swift */; };
 		CAE61048256E173800A65C3C /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE61043256E173800A65C3C /* SearchListView.swift */; };
+		FB5F016126549DA000E0191F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016026549DA000E0191F /* AppDelegate.swift */; };
+		FB5F016326549DEA00E0191F /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016226549DEA00E0191F /* CalculatorViewController.swift */; };
+		FB5F016526549E1E00E0191F /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016426549E1E00E0191F /* CalculatorViewModel.swift */; };
+		FB5F016726549E6E00E0191F /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016626549E6E00E0191F /* CalculatorView.swift */; };
+		FB5F01692654A4D300E0191F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5F01682654A4D300E0191F /* Launch Screen.storyboard */; };
+		FB5F016C2654AA2F00E0191F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FB5F016B2654AA2F00E0191F /* Kingfisher */; };
 		FB61844425B7D25A00EA1DCC /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844325B7D25A00EA1DCC /* Stat.swift */; };
 		FB61844925B7D66F00EA1DCC /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844825B7D66F00EA1DCC /* Form.swift */; };
 		FB61845925B7E08C00EA1DCC /* StatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61845825B7E08C00EA1DCC /* StatRowView.swift */; };
@@ -40,8 +42,10 @@
 		FB70C44725AAA0AE004A654E /* TypeBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C44025AAA0AE004A654E /* TypeBadgeView.swift */; };
 		FB70C44825AAA0AE004A654E /* DamageRelationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C44125AAA0AE004A654E /* DamageRelationView.swift */; };
 		FB70C44925AAA0AE004A654E /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C44225AAA0AE004A654E /* SearchButton.swift */; };
+		FB98974326438EE6004DADEE /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98974226438EE6004DADEE /* SearchListViewController.swift */; };
+		FB98974626438F37004DADEE /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98974526438F37004DADEE /* UIViewController+Child.swift */; };
+		FB98974826438F62004DADEE /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98974726438F62004DADEE /* UIColor+Hex.swift */; };
 		FBAD418125BBC4A90062CD00 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD418025BBC4A90062CD00 /* Language.swift */; };
-		FBAD418625BD2EDB0062CD00 /* SimpleImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD418525BD2EDB0062CD00 /* SimpleImageCache.swift */; };
 		FBAD418E25BD3A6E0062CD00 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD418D25BD3A6E0062CD00 /* AppColors.swift */; };
 		FBAD419325BE88800062CD00 /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD419225BE88800062CD00 /* Generation.swift */; };
 		FBAD419825BE88FB0062CD00 /* AbilityEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD419725BE88FB0062CD00 /* AbilityEffect.swift */; };
@@ -90,7 +94,6 @@
 
 /* Begin PBXFileReference section */
 		CA0EB7562567714700981380 /* PokeTypeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeTypeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA0EB7592567714700981380 /* PokeTypeCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeTypeCalculatorApp.swift; sourceTree = "<group>"; };
 		CA0EB75D2567714D00981380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0EB7602567714D00981380 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA0EB7622567714D00981380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,16 +104,18 @@
 		CA0EB7762567714D00981380 /* PokeTypeCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeTypeCalculatorUITests.swift; sourceTree = "<group>"; };
 		CA0EB7782567714D00981380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA0EB793256771DB00981380 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
-		CA0EB7992567721E00981380 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		CA73F0AE256C2ADE00417092 /* PokemonImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImageView.swift; sourceTree = "<group>"; };
-		CA73F0B3256C2B0600417092 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		CA7D8134256CA81B00D0AABA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		CAA8E922256AFC8800A4F7C1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		CAA8E92A256AFCD500A4F7C1 /* PokemonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
 		CAA8E94F256B23D000A4F7C1 /* PokemonHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonHolder.swift; sourceTree = "<group>"; };
-		CAE6103F256E173800A65C3C /* TypeCalculatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCalculatorView.swift; sourceTree = "<group>"; };
 		CAE61041256E173800A65C3C /* SearchListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewModel.swift; sourceTree = "<group>"; };
 		CAE61043256E173800A65C3C /* SearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
+		FB5F016026549DA000E0191F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB5F016226549DEA00E0191F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		FB5F016426549E1E00E0191F /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		FB5F016626549E6E00E0191F /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		FB5F01682654A4D300E0191F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FB61844325B7D25A00EA1DCC /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		FB61844825B7D66F00EA1DCC /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		FB61845825B7E08C00EA1DCC /* StatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRowView.swift; sourceTree = "<group>"; };
@@ -128,8 +133,10 @@
 		FB70C44025AAA0AE004A654E /* TypeBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeBadgeView.swift; sourceTree = "<group>"; };
 		FB70C44125AAA0AE004A654E /* DamageRelationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageRelationView.swift; sourceTree = "<group>"; };
 		FB70C44225AAA0AE004A654E /* SearchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
+		FB98974226438EE6004DADEE /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
+		FB98974526438F37004DADEE /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
+		FB98974726438F62004DADEE /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		FBAD418025BBC4A90062CD00 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		FBAD418525BD2EDB0062CD00 /* SimpleImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleImageCache.swift; sourceTree = "<group>"; };
 		FBAD418D25BD3A6E0062CD00 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		FBAD419225BE88800062CD00 /* Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generation.swift; sourceTree = "<group>"; };
 		FBAD419725BE88FB0062CD00 /* AbilityEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffect.swift; sourceTree = "<group>"; };
@@ -164,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5F016C2654AA2F00E0191F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,13 +217,15 @@
 			children = (
 				CA0EB75D2567714D00981380 /* Assets.xcassets */,
 				CA0EB789256771AE00981380 /* ComponentView */,
+				FB98974426438F2A004DADEE /* Extension */,
 				CA0EB7622567714D00981380 /* Info.plist */,
 				CA0EB787256771AE00981380 /* Model */,
 				CAA8E921256AFC7100A4F7C1 /* Network */,
-				CA0EB7592567714700981380 /* PokeTypeCalculatorApp.swift */,
 				CA0EB75F2567714D00981380 /* Preview Content */,
 				CAE6103D256E173800A65C3C /* UI */,
 				CA0EB798256771F600981380 /* Util */,
+				FB5F016026549DA000E0191F /* AppDelegate.swift */,
+				FB5F01682654A4D300E0191F /* Launch Screen.storyboard */,
 			);
 			path = PokeTypeCalculator;
 			sourceTree = "<group>";
@@ -280,9 +290,6 @@
 		CA0EB798256771F600981380 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				CA0EB7992567721E00981380 /* UIColor+Hex.swift */,
-				CA73F0B3256C2B0600417092 /* ImageLoader.swift */,
-				FBAD418525BD2EDB0062CD00 /* SimpleImageCache.swift */,
 				FBAD418D25BD3A6E0062CD00 /* AppColors.swift */,
 			);
 			path = Util;
@@ -312,7 +319,8 @@
 			isa = PBXGroup;
 			children = (
 				FB70C43B25AAA0AD004A654E /* View */,
-				CAE6103F256E173800A65C3C /* TypeCalculatorView.swift */,
+				FB5F016226549DEA00E0191F /* CalculatorViewController.swift */,
+				FB5F016426549E1E00E0191F /* CalculatorViewModel.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -323,6 +331,7 @@
 				FB70C43325AAA0A6004A654E /* View */,
 				CAE61041256E173800A65C3C /* SearchListViewModel.swift */,
 				CAE61043256E173800A65C3C /* SearchListView.swift */,
+				FB98974226438EE6004DADEE /* SearchListViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -346,8 +355,18 @@
 				FB70C44225AAA0AE004A654E /* SearchButton.swift */,
 				FBB30E8F25B525B7006D0594 /* DetailsButton.swift */,
 				FBB30EB925B68A4C006D0594 /* PokemonOfficialArtView.swift */,
+				FB5F016626549E6E00E0191F /* CalculatorView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FB98974426438F2A004DADEE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FB98974726438F62004DADEE /* UIColor+Hex.swift */,
+				FB98974526438F37004DADEE /* UIViewController+Child.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FBAD41A125BE8AB40062CD00 /* Ability */ = {
@@ -434,6 +453,9 @@
 			dependencies = (
 			);
 			name = PokeTypeCalculator;
+			packageProductDependencies = (
+				FB5F016B2654AA2F00E0191F /* Kingfisher */,
+			);
 			productName = PokeTypeCalculator;
 			productReference = CA0EB7562567714700981380 /* PokeTypeCalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -505,6 +527,9 @@
 				Base,
 			);
 			mainGroup = CA0EB74D2567714700981380;
+			packageReferences = (
+				FB5F016A2654AA2F00E0191F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = CA0EB7572567714700981380 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -521,6 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5F01692654A4D300E0191F /* Launch Screen.storyboard in Resources */,
 				CA0EB7612567714D00981380 /* Preview Assets.xcassets in Resources */,
 				CA0EB75E2567714D00981380 /* Assets.xcassets in Resources */,
 			);
@@ -549,15 +575,16 @@
 			files = (
 				FBAD41BE25BFCD990062CD00 /* AbilityEffectChangeRow.swift in Sources */,
 				FBB30E8625B522CC006D0594 /* TypeDescriptionSection.swift in Sources */,
-				CA0EB75A2567714700981380 /* PokeTypeCalculatorApp.swift in Sources */,
 				FBB30E8725B522CC006D0594 /* DamageRelationCalculation.swift in Sources */,
 				FB70C44725AAA0AE004A654E /* TypeBadgeView.swift in Sources */,
 				FBB30E7E25B522C2006D0594 /* SpriteImages.swift in Sources */,
 				FB61847E25B7F8D500EA1DCC /* BioRowView.swift in Sources */,
 				FBAD41AB25BFC37D0062CD00 /* AbilityDetailsViewModel.swift in Sources */,
 				CAA8E92B256AFCD500A4F7C1 /* PokemonAPI.swift in Sources */,
+				FB98974826438F62004DADEE /* UIColor+Hex.swift in Sources */,
 				FB70C43725AAA0A6004A654E /* SearchItemRow.swift in Sources */,
 				FB70C44925AAA0AE004A654E /* SearchButton.swift in Sources */,
+				FB5F016126549DA000E0191F /* AppDelegate.swift in Sources */,
 				FBEA484825AA27AA00C9017E /* Pokemon.swift in Sources */,
 				FBAD41A325BE8AC20062CD00 /* AbilityDetailView.swift in Sources */,
 				FB61844425B7D25A00EA1DCC /* Stat.swift in Sources */,
@@ -565,22 +592,25 @@
 				FB70C44625AAA0AE004A654E /* PokemonHolderView.swift in Sources */,
 				FBAD41C325BFD15B0062CD00 /* AbilityEffectEntrySection.swift in Sources */,
 				FBEA484B25AA27AA00C9017E /* PokemonType.swift in Sources */,
+				FB5F016726549E6E00E0191F /* CalculatorView.swift in Sources */,
 				CA7D8135256CA81B00D0AABA /* LoadingView.swift in Sources */,
 				FBEA484625AA27AA00C9017E /* ListItem.swift in Sources */,
 				FBB30EB225B5D647006D0594 /* AbilitySectionView.swift in Sources */,
-				FBAD418625BD2EDB0062CD00 /* SimpleImageCache.swift in Sources */,
 				FB61846B25B7E22C00EA1DCC /* FormSectionView.swift in Sources */,
 				FBEA484A25AA27AA00C9017E /* PokemonTypeHolder.swift in Sources */,
 				FBB30E9625B52624006D0594 /* DetailView.swift in Sources */,
 				FBAD419825BE88FB0062CD00 /* AbilityEffect.swift in Sources */,
+				FB5F016526549E1E00E0191F /* CalculatorViewModel.swift in Sources */,
 				FBB30E9025B525B7006D0594 /* DetailsButton.swift in Sources */,
 				FBAD418125BBC4A90062CD00 /* Language.swift in Sources */,
+				FB5F016326549DEA00E0191F /* CalculatorViewController.swift in Sources */,
 				FB70C44525AAA0AE004A654E /* SelectedPokemonView.swift in Sources */,
+				FB98974326438EE6004DADEE /* SearchListViewController.swift in Sources */,
 				CAA8E923256AFC8800A4F7C1 /* APIClient.swift in Sources */,
 				FBEA484725AA27AA00C9017E /* ListResponse.swift in Sources */,
 				FBAD419325BE88800062CD00 /* Generation.swift in Sources */,
-				CAE61045256E173800A65C3C /* TypeCalculatorView.swift in Sources */,
 				FB61845925B7E08C00EA1DCC /* StatRowView.swift in Sources */,
+				FB98974626438F37004DADEE /* UIViewController+Child.swift in Sources */,
 				FB61844925B7D66F00EA1DCC /* Form.swift in Sources */,
 				FBAD419D25BE89750062CD00 /* AbilityDetails.swift in Sources */,
 				FBB30EBA25B68A4C006D0594 /* PokemonOfficialArtView.swift in Sources */,
@@ -588,7 +618,6 @@
 				CAE61046256E173800A65C3C /* SearchListViewModel.swift in Sources */,
 				FBAD41B625BFCD680062CD00 /* AbilityEffectChangesSection.swift in Sources */,
 				CA0EB794256771DB00981380 /* Type.swift in Sources */,
-				CA73F0B4256C2B0600417092 /* ImageLoader.swift in Sources */,
 				FB61847625B7F71E00EA1DCC /* PokemonSpriteView.swift in Sources */,
 				FB70C43625AAA0A6004A654E /* SearchBarView.swift in Sources */,
 				FBB30E9F25B5D160006D0594 /* AbilityRowView.swift in Sources */,
@@ -598,7 +627,6 @@
 				FBAD41B025BFC9500062CD00 /* AbilityEffectChanges.swift in Sources */,
 				FB61848325B7F8DD00EA1DCC /* BioSectionView.swift in Sources */,
 				FBB30E8825B522CC006D0594 /* DamageRelation.swift in Sources */,
-				CA0EB79A2567721E00981380 /* UIColor+Hex.swift in Sources */,
 				FB61845E25B7E09B00EA1DCC /* StatSectionView.swift in Sources */,
 				FB70C44825AAA0AE004A654E /* DamageRelationView.swift in Sources */,
 				FBAD418E25BD3A6E0062CD00 /* AppColors.swift in Sources */,
@@ -924,6 +952,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB5F016A2654AA2F00E0191F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB5F016B2654AA2F00E0191F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB5F016A2654AA2F00E0191F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA0EB74E2567714700981380 /* Project object */;
 }

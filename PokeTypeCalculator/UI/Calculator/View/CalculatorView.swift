@@ -1,19 +1,19 @@
 //
-//  TypeCalculatorView.swift
+//  CalculatorView.swift
 //  PokeTypeCalculator
 //
-//  Created by Brandon Jenniges on 11/19/20.
+//  Created by Brandon Jenniges on 5/18/21.
 //
 
 import SwiftUI
 import Combine
 
-struct TypeCalculatorView: View {
+struct CalculatorView: View {
     
-    @ObservedObject var holder: PokemonHolder = PokemonHolder()
+    @ObservedObject var viewModel: CalculatorViewModel
     
     var hasData: Bool {
-        self.holder.pokemon != nil
+        self.viewModel.pokemon != nil
     }
     
     var body: some View {
@@ -22,14 +22,14 @@ struct TypeCalculatorView: View {
             
             // Main View
             VStack(spacing: 0) {
-                PokemonHolderView(holder: self.holder)
+                PokemonHolderView(viewModel: self.viewModel)
                     .padding(.vertical, 12.0)
                 
                 if self.hasData {
-                    DetailsButton(holder: self.holder)
+                    DetailsButton(viewModel: self.viewModel)
                         .padding(.vertical, 12.0)
                     
-                    DamageRelationView(holder: self.holder)
+                    DamageRelationView(viewModel: self.viewModel)
                         .layoutPriority(.greatestFiniteMagnitude)
                 }
                 
@@ -47,7 +47,7 @@ struct TypeCalculatorView: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        SearchButton(holder: self.holder)
+                        SearchButton(showSearchViewSubject: self.viewModel.showSearchViewSubject)
                             .padding(.trailing, 16.0)
                             .padding(.bottom, 8.0)
                     }
@@ -57,16 +57,13 @@ struct TypeCalculatorView: View {
     }
     
     private func loadRandomPokemon() {
-        self.holder.getRandomPokemon()
+        self.viewModel.getRandomPokemon()
     }
     
 }
 
-struct TypeCalculatorView_Previews: PreviewProvider {
+struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        let holder = TypeHolder.mockType
-        let view = TypeCalculatorView()
-        view.holder.primaryType.type = holder.type
-        return view
+        CalculatorView(viewModel: CalculatorViewModel())
     }
 }

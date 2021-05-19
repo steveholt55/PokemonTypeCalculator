@@ -15,6 +15,8 @@ class SearchListViewModel: ObservableObject {
     @Published var recents: [ListItem] = []
     @Published var list: [ListItem] = []
     
+    let itemSelectedSubject = PassthroughSubject<ListItem, Never>()
+    
     var cancellationToken: AnyCancellable?
     
     init() {

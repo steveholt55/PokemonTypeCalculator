@@ -9,30 +9,29 @@ import SwiftUI
 
 struct PokemonHolderView: View {
     
-    @ObservedObject var holder: PokemonHolder
+    @ObservedObject var viewModel: CalculatorViewModel
     
     var body: some View {
         
             VStack {
                 
-                SelectedPokemonView(holder: self.holder)
+                SelectedPokemonView(viewModel: self.viewModel)
                     .frame(maxWidth: .infinity, maxHeight: 50)
                 
-                if let officialArtImage = self.holder.pokemon?.sprites.officialArtImageURL {
+                if let officialArtImage = self.viewModel.officialArtImage {
                     PokemonOfficialArtView(imageURL: officialArtImage)
                 }
                 
                 HStack(spacing: 0) {
-                    if let primaryType = self.holder.primaryType.type {
+                    if let primaryType = self.viewModel.primaryType.type {
                         TypeBadgeView(type: primaryType)
                             .padding(.horizontal, 8.0)
                     }
                     
-                    if let secondaryType = self.holder.secondaryType.type {
+                    if let secondaryType = self.viewModel.secondaryType.type {
                         TypeBadgeView(type: secondaryType)
                             .padding(.horizontal, 8.0)
                     }
-                    
                 }
         }
     }
@@ -40,6 +39,6 @@ struct PokemonHolderView: View {
 
 struct TypeDisplayView_Previews: PreviewProvider {
     static var previews: some View {
-        return PokemonHolderView(holder: PokemonHolder.mock())
+        return PokemonHolderView(viewModel: CalculatorViewModel())
     }
 }

@@ -11,10 +11,7 @@ struct SearchListView: View {
     
     @State var searchText: String = ""
     
-    @ObservedObject var viewModel = SearchListViewModel()
-    
-    @Environment(\.presentationMode) var presentation
-    @EnvironmentObject var holder: PokemonHolder
+    @ObservedObject var viewModel: SearchListViewModel
     
     var body: some View {
         VStack {
@@ -31,9 +28,7 @@ struct SearchListView: View {
                         ForEach(viewModel.recents) { item in
                             SearchItemRow(item: item)
                                 .onTapGesture {
-                                    self.viewModel.addRecent(item)
-                                    self.holder.name = item.name
-                                    self.presentation.wrappedValue.dismiss()
+                                    self.viewModel.itemSelectedSubject.send(item)
                                 }
                         }
                     }
@@ -44,9 +39,7 @@ struct SearchListView: View {
                         ForEach(filteredItems) { item in
                             SearchItemRow(item: item)
                                 .onTapGesture {
-                                    self.viewModel.addRecent(item)
-                                    self.holder.name = item.name
-                                    self.presentation.wrappedValue.dismiss()
+                                    self.viewModel.itemSelectedSubject.send(item)
                                 }
                         }
                     }
@@ -62,7 +55,7 @@ struct SearchListView_Previews: PreviewProvider {
     static var previews: some View {
         let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/60.png")!
         
-        let view = SearchListView()
+        let view = SearchListView(viewModel: SearchListViewModel())
         view.viewModel.recents = [
             ListItem(url: url, name: "Taco"),
             ListItem(url: url, name: "Milk"),
