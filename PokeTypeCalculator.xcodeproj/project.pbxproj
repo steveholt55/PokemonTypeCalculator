@@ -25,6 +25,11 @@
 		FB5F016726549E6E00E0191F /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016626549E6E00E0191F /* CalculatorView.swift */; };
 		FB5F01692654A4D300E0191F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5F01682654A4D300E0191F /* Launch Screen.storyboard */; };
 		FB5F016C2654AA2F00E0191F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FB5F016B2654AA2F00E0191F /* Kingfisher */; };
+		FB5F016E2655EFB700E0191F /* AbilityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016D2655EFB700E0191F /* AbilityDetailView.swift */; };
+		FB5F01702655EFCA00E0191F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016F2655EFC900E0191F /* DetailView.swift */; };
+		FB5F01722655EFD800E0191F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F01712655EFD800E0191F /* DetailsViewController.swift */; };
+		FB5F01742655EFE000E0191F /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F01732655EFE000E0191F /* DetailsViewModel.swift */; };
+		FB5F01762655EFF100E0191F /* AbilityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F01752655EFF100E0191F /* AbilityDetailsViewController.swift */; };
 		FB61844425B7D25A00EA1DCC /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844325B7D25A00EA1DCC /* Stat.swift */; };
 		FB61844925B7D66F00EA1DCC /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844825B7D66F00EA1DCC /* Form.swift */; };
 		FB61845925B7E08C00EA1DCC /* StatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61845825B7E08C00EA1DCC /* StatRowView.swift */; };
@@ -50,7 +55,6 @@
 		FBAD419325BE88800062CD00 /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD419225BE88800062CD00 /* Generation.swift */; };
 		FBAD419825BE88FB0062CD00 /* AbilityEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD419725BE88FB0062CD00 /* AbilityEffect.swift */; };
 		FBAD419D25BE89750062CD00 /* AbilityDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD419C25BE89750062CD00 /* AbilityDetails.swift */; };
-		FBAD41A325BE8AC20062CD00 /* AbilityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41A225BE8AC20062CD00 /* AbilityDetailView.swift */; };
 		FBAD41AB25BFC37D0062CD00 /* AbilityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41AA25BFC37D0062CD00 /* AbilityDetailsViewModel.swift */; };
 		FBAD41B025BFC9500062CD00 /* AbilityEffectChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41AF25BFC9500062CD00 /* AbilityEffectChanges.swift */; };
 		FBAD41B625BFCD680062CD00 /* AbilityEffectChangesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD41B525BFCD680062CD00 /* AbilityEffectChangesSection.swift */; };
@@ -63,7 +67,6 @@
 		FBB30E8725B522CC006D0594 /* DamageRelationCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E8425B522CC006D0594 /* DamageRelationCalculation.swift */; };
 		FBB30E8825B522CC006D0594 /* DamageRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E8525B522CC006D0594 /* DamageRelation.swift */; };
 		FBB30E9025B525B7006D0594 /* DetailsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E8F25B525B7006D0594 /* DetailsButton.swift */; };
-		FBB30E9625B52624006D0594 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E9525B52624006D0594 /* DetailView.swift */; };
 		FBB30E9F25B5D160006D0594 /* AbilityRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30E9E25B5D160006D0594 /* AbilityRowView.swift */; };
 		FBB30EA725B5D182006D0594 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30EA625B5D182006D0594 /* SectionHeaderView.swift */; };
 		FBB30EB225B5D647006D0594 /* AbilitySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30EB125B5D647006D0594 /* AbilitySectionView.swift */; };
@@ -116,6 +119,11 @@
 		FB5F016426549E1E00E0191F /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		FB5F016626549E6E00E0191F /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		FB5F01682654A4D300E0191F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FB5F016D2655EFB700E0191F /* AbilityDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbilityDetailView.swift; sourceTree = "<group>"; };
+		FB5F016F2655EFC900E0191F /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FB5F01712655EFD800E0191F /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FB5F01732655EFE000E0191F /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		FB5F01752655EFF100E0191F /* AbilityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetailsViewController.swift; sourceTree = "<group>"; };
 		FB61844325B7D25A00EA1DCC /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		FB61844825B7D66F00EA1DCC /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		FB61845825B7E08C00EA1DCC /* StatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRowView.swift; sourceTree = "<group>"; };
@@ -141,7 +149,6 @@
 		FBAD419225BE88800062CD00 /* Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generation.swift; sourceTree = "<group>"; };
 		FBAD419725BE88FB0062CD00 /* AbilityEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffect.swift; sourceTree = "<group>"; };
 		FBAD419C25BE89750062CD00 /* AbilityDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetails.swift; sourceTree = "<group>"; };
-		FBAD41A225BE8AC20062CD00 /* AbilityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetailView.swift; sourceTree = "<group>"; };
 		FBAD41AA25BFC37D0062CD00 /* AbilityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetailsViewModel.swift; sourceTree = "<group>"; };
 		FBAD41AF25BFC9500062CD00 /* AbilityEffectChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffectChanges.swift; sourceTree = "<group>"; };
 		FBAD41B525BFCD680062CD00 /* AbilityEffectChangesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityEffectChangesSection.swift; sourceTree = "<group>"; };
@@ -154,7 +161,6 @@
 		FBB30E8425B522CC006D0594 /* DamageRelationCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageRelationCalculation.swift; sourceTree = "<group>"; };
 		FBB30E8525B522CC006D0594 /* DamageRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageRelation.swift; sourceTree = "<group>"; };
 		FBB30E8F25B525B7006D0594 /* DetailsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsButton.swift; sourceTree = "<group>"; };
-		FBB30E9525B52624006D0594 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FBB30E9E25B5D160006D0594 /* AbilityRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityRowView.swift; sourceTree = "<group>"; };
 		FBB30EA625B5D182006D0594 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		FBB30EB125B5D647006D0594 /* AbilitySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilitySectionView.swift; sourceTree = "<group>"; };
@@ -373,8 +379,8 @@
 			isa = PBXGroup;
 			children = (
 				FBAD41B425BFCD490062CD00 /* View */,
-				FBAD41A225BE8AC20062CD00 /* AbilityDetailView.swift */,
 				FBAD41AA25BFC37D0062CD00 /* AbilityDetailsViewModel.swift */,
+				FB5F01752655EFF100E0191F /* AbilityDetailsViewController.swift */,
 			);
 			path = Ability;
 			sourceTree = "<group>";
@@ -382,6 +388,7 @@
 		FBAD41B425BFCD490062CD00 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB5F016D2655EFB700E0191F /* AbilityDetailView.swift */,
 				FBAD41B525BFCD680062CD00 /* AbilityEffectChangesSection.swift */,
 				FBAD41BD25BFCD990062CD00 /* AbilityEffectChangeRow.swift */,
 				FBAD41C225BFD15B0062CD00 /* AbilityEffectEntrySection.swift */,
@@ -416,7 +423,8 @@
 			isa = PBXGroup;
 			children = (
 				FBB30E9D25B5D134006D0594 /* View */,
-				FBB30E9525B52624006D0594 /* DetailView.swift */,
+				FB5F01712655EFD800E0191F /* DetailsViewController.swift */,
+				FB5F01732655EFE000E0191F /* DetailsViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -424,6 +432,7 @@
 		FBB30E9D25B5D134006D0594 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB5F016F2655EFC900E0191F /* DetailView.swift */,
 				FBB30E9E25B5D160006D0594 /* AbilityRowView.swift */,
 				FBB30EB125B5D647006D0594 /* AbilitySectionView.swift */,
 				FB61847D25B7F8D500EA1DCC /* BioRowView.swift */,
@@ -577,16 +586,19 @@
 				FBB30E8625B522CC006D0594 /* TypeDescriptionSection.swift in Sources */,
 				FBB30E8725B522CC006D0594 /* DamageRelationCalculation.swift in Sources */,
 				FB70C44725AAA0AE004A654E /* TypeBadgeView.swift in Sources */,
+				FB5F01762655EFF100E0191F /* AbilityDetailsViewController.swift in Sources */,
 				FBB30E7E25B522C2006D0594 /* SpriteImages.swift in Sources */,
 				FB61847E25B7F8D500EA1DCC /* BioRowView.swift in Sources */,
+				FB5F016E2655EFB700E0191F /* AbilityDetailView.swift in Sources */,
 				FBAD41AB25BFC37D0062CD00 /* AbilityDetailsViewModel.swift in Sources */,
 				CAA8E92B256AFCD500A4F7C1 /* PokemonAPI.swift in Sources */,
+				FB5F01722655EFD800E0191F /* DetailsViewController.swift in Sources */,
 				FB98974826438F62004DADEE /* UIColor+Hex.swift in Sources */,
 				FB70C43725AAA0A6004A654E /* SearchItemRow.swift in Sources */,
 				FB70C44925AAA0AE004A654E /* SearchButton.swift in Sources */,
 				FB5F016126549DA000E0191F /* AppDelegate.swift in Sources */,
+				FB5F01702655EFCA00E0191F /* DetailView.swift in Sources */,
 				FBEA484825AA27AA00C9017E /* Pokemon.swift in Sources */,
-				FBAD41A325BE8AC20062CD00 /* AbilityDetailView.swift in Sources */,
 				FB61844425B7D25A00EA1DCC /* Stat.swift in Sources */,
 				CA73F0AF256C2ADE00417092 /* PokemonImageView.swift in Sources */,
 				FB70C44625AAA0AE004A654E /* PokemonHolderView.swift in Sources */,
@@ -598,7 +610,6 @@
 				FBB30EB225B5D647006D0594 /* AbilitySectionView.swift in Sources */,
 				FB61846B25B7E22C00EA1DCC /* FormSectionView.swift in Sources */,
 				FBEA484A25AA27AA00C9017E /* PokemonTypeHolder.swift in Sources */,
-				FBB30E9625B52624006D0594 /* DetailView.swift in Sources */,
 				FBAD419825BE88FB0062CD00 /* AbilityEffect.swift in Sources */,
 				FB5F016526549E1E00E0191F /* CalculatorViewModel.swift in Sources */,
 				FBB30E9025B525B7006D0594 /* DetailsButton.swift in Sources */,
@@ -631,6 +642,7 @@
 				FB70C44825AAA0AE004A654E /* DamageRelationView.swift in Sources */,
 				FBAD418E25BD3A6E0062CD00 /* AppColors.swift in Sources */,
 				FBAD41C825BFD1660062CD00 /* AbilityEffectEntryRow.swift in Sources */,
+				FB5F01742655EFE000E0191F /* DetailsViewModel.swift in Sources */,
 				FBB30EA725B5D182006D0594 /* SectionHeaderView.swift in Sources */,
 				CAE61048256E173800A65C3C /* SearchListView.swift in Sources */,
 			);

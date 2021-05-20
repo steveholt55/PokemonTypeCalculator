@@ -9,8 +9,15 @@ import SwiftUI
 
 struct DetailView: View {
     
-    @State var pokemon: Pokemon
-    @State var primaryColor: Color = AppColors.red
+    @ObservedObject var viewModel: DetailsViewModel
+    
+    private var pokemon: Pokemon {
+        viewModel.pokemon
+    }
+    
+    private var primaryColor: Color {
+        viewModel.primaryColor
+    }
     
     enum DetailSection: String, Identifiable {
         var id: String {
@@ -84,6 +91,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(pokemon: PokemonHolder.mock().pokemon!)
+        DetailView(viewModel: DetailsViewModel(pokemon: PokemonHolder.mock().pokemon!, primaryColor: AppColors.red))
     }
 }

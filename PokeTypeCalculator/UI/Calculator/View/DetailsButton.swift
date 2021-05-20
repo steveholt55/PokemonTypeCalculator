@@ -10,14 +10,13 @@ import SwiftUI
 struct DetailsButton: View {
     
     @ObservedObject var viewModel: CalculatorViewModel
-    @State var showingDetailView = false
     
     let padding: CGFloat = 12
     let imageSize: CGFloat = 32
     var body: some View {
         
         Button(action: {
-            self.showingDetailView.toggle()
+            self.viewModel.showDetailsSubject.send(true)
         }) {
             HStack {
                 Image(systemName: "info.circle")
@@ -30,13 +29,6 @@ struct DetailsButton: View {
                     .fontWeight(.bold)
             }
         }
-        .sheet(isPresented: $showingDetailView) {
-            if let pokemon = self.viewModel.pokemon, let color = viewModel.primaryType.type?.color {
-                DetailView(pokemon: pokemon, primaryColor: color)
-            }
-        }
-        
-    
     }
 }
 

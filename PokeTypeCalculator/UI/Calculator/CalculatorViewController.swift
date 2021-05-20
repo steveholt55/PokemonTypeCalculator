@@ -44,6 +44,7 @@ class CalculatorViewController: UIViewController {
     
     private func setupObservables() {
         self.setupShowSearchViewSubject()
+        self.setupShowDetailsSubject()
     }
     
     private func setupShowSearchViewSubject() {
@@ -52,6 +53,15 @@ class CalculatorViewController: UIViewController {
         }
         .store(in: &disposeBag)
     }
+    
+    private func setupShowDetailsSubject() {
+        self.viewModel.showDetailsSubject.sink { [weak self] search in
+            self?.showDetailsViewController()
+        }
+        .store(in: &disposeBag)
+    }
+    
+    // MARK: - Search
     
     private func showSearchViewController() {
         let searchViewController = SearchListViewController()
@@ -62,4 +72,14 @@ class CalculatorViewController: UIViewController {
         .store(in: &disposeBag)
         self.present(searchViewController, animated: true, completion: nil)
     }
+    
+    // MARK: - Details
+    
+    private func showDetailsViewController() {
+        if let pokemon = self.viewModel.pokemon, let color = viewModel.primaryType.type?.color {
+            let detailsViewController = DetailsViewController(viewModel: DetailsViewModel(pokemon: pokemon, primaryColor: color))
+            self.present(detailsViewController, animated: true, completion: nil)
+        }
+    }
+    
 }
