@@ -18,7 +18,6 @@
 		CAA8E92B256AFCD500A4F7C1 /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8E92A256AFCD500A4F7C1 /* PokemonAPI.swift */; };
 		CAA8E950256B23D000A4F7C1 /* PokemonHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8E94F256B23D000A4F7C1 /* PokemonHolder.swift */; };
 		CAE61046256E173800A65C3C /* SearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE61041256E173800A65C3C /* SearchListViewModel.swift */; };
-		CAE61048256E173800A65C3C /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE61043256E173800A65C3C /* SearchListView.swift */; };
 		FB5F016126549DA000E0191F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016026549DA000E0191F /* AppDelegate.swift */; };
 		FB5F016326549DEA00E0191F /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016226549DEA00E0191F /* CalculatorViewController.swift */; };
 		FB5F016526549E1E00E0191F /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F016426549E1E00E0191F /* CalculatorViewModel.swift */; };
@@ -30,6 +29,7 @@
 		FB5F01722655EFD800E0191F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F01712655EFD800E0191F /* DetailsViewController.swift */; };
 		FB5F01742655EFE000E0191F /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F01732655EFE000E0191F /* DetailsViewModel.swift */; };
 		FB5F01762655EFF100E0191F /* AbilityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F01752655EFF100E0191F /* AbilityDetailsViewController.swift */; };
+		FB5F01782655F97200E0191F /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F01772655F97200E0191F /* SearchListView.swift */; };
 		FB61844425B7D25A00EA1DCC /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844325B7D25A00EA1DCC /* Stat.swift */; };
 		FB61844925B7D66F00EA1DCC /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61844825B7D66F00EA1DCC /* Form.swift */; };
 		FB61845925B7E08C00EA1DCC /* StatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB61845825B7E08C00EA1DCC /* StatRowView.swift */; };
@@ -113,7 +113,6 @@
 		CAA8E92A256AFCD500A4F7C1 /* PokemonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
 		CAA8E94F256B23D000A4F7C1 /* PokemonHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonHolder.swift; sourceTree = "<group>"; };
 		CAE61041256E173800A65C3C /* SearchListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewModel.swift; sourceTree = "<group>"; };
-		CAE61043256E173800A65C3C /* SearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
 		FB5F016026549DA000E0191F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB5F016226549DEA00E0191F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		FB5F016426549E1E00E0191F /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
@@ -124,6 +123,7 @@
 		FB5F01712655EFD800E0191F /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FB5F01732655EFE000E0191F /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		FB5F01752655EFF100E0191F /* AbilityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetailsViewController.swift; sourceTree = "<group>"; };
+		FB5F01772655F97200E0191F /* SearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
 		FB61844325B7D25A00EA1DCC /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		FB61844825B7D66F00EA1DCC /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		FB61845825B7E08C00EA1DCC /* StatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRowView.swift; sourceTree = "<group>"; };
@@ -336,7 +336,6 @@
 			children = (
 				FB70C43325AAA0A6004A654E /* View */,
 				CAE61041256E173800A65C3C /* SearchListViewModel.swift */,
-				CAE61043256E173800A65C3C /* SearchListView.swift */,
 				FB98974226438EE6004DADEE /* SearchListViewController.swift */,
 			);
 			path = Search;
@@ -347,6 +346,7 @@
 			children = (
 				FB70C43425AAA0A6004A654E /* SearchBarView.swift */,
 				FB70C43525AAA0A6004A654E /* SearchItemRow.swift */,
+				FB5F01772655F97200E0191F /* SearchListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -615,6 +615,7 @@
 				FBB30E9025B525B7006D0594 /* DetailsButton.swift in Sources */,
 				FBAD418125BBC4A90062CD00 /* Language.swift in Sources */,
 				FB5F016326549DEA00E0191F /* CalculatorViewController.swift in Sources */,
+				FB5F01782655F97200E0191F /* SearchListView.swift in Sources */,
 				FB70C44525AAA0AE004A654E /* SelectedPokemonView.swift in Sources */,
 				FB98974326438EE6004DADEE /* SearchListViewController.swift in Sources */,
 				CAA8E923256AFC8800A4F7C1 /* APIClient.swift in Sources */,
@@ -644,7 +645,6 @@
 				FBAD41C825BFD1660062CD00 /* AbilityEffectEntryRow.swift in Sources */,
 				FB5F01742655EFE000E0191F /* DetailsViewModel.swift in Sources */,
 				FBB30EA725B5D182006D0594 /* SectionHeaderView.swift in Sources */,
-				CAE61048256E173800A65C3C /* SearchListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

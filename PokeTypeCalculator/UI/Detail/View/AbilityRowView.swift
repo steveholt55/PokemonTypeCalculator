@@ -30,6 +30,7 @@ struct AbilityRowView: View {
             
             Image(systemName: "chevron.right")
         }
+        .contentShape(Rectangle())
         .onTapGesture {
             self.showingDetailView.toggle()
         }

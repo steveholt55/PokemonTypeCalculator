@@ -18,10 +18,10 @@ struct SearchItemRow: View {
             }
             Text(item.name.capitalized)
                 .padding(.horizontal, 8.0)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .font(.title3)
-                .background(Color(UIColor.secondarySystemGroupedBackground)) // Hack to make full row clickable instead of just the text
+            Spacer()
         }
+        .contentShape(Rectangle())
     }
 }
 
