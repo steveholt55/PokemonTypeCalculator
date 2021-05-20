@@ -15,22 +15,27 @@ struct SelectedPokemonView: View {
         
         if let selectedName = viewModel.pokemon?.name {
             ZStack {
-                
                 if let primaryType = viewModel.primaryType.type {
-                    Ellipse()
-                        .trim(from: 0, to: 0.5)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                        .offset(y: -100)
-                        .foregroundColor(primaryType.color)
-                        .shadow(radius: 1)
-                        .overlay(Text(selectedName.capitalized)
+                    ZStack {
+                        GeometryReader { reader in
+                            let radius = max(reader.size.width, reader.size.height)
+                            primaryType.color
+                                .frame(width: radius, height: radius)
+                                .cornerRadius(radius / 2.0)
+                                .shadow(radius: 1)
+                                .offset(y: -radius / 2)
+                        }
+                        .frame(height: 200)
+                        
+                        Text(selectedName.capitalized)
                                     .foregroundColor(.white)
                                     .font(.largeTitle)
                                     .fontWeight(.black)
-                                    .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4)))
+                                    .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
+                    }
+                    
                 }
-                
-            }.scaledToFill()
+            }
         } else {
             LoadingView()
         }
@@ -39,6 +44,16 @@ struct SelectedPokemonView: View {
 
 struct SelectedPokemonView_Previews: PreviewProvider {
     static var previews: some View {
-        return SelectedPokemonView(viewModel: CalculatorViewModel())
+        let loadingViewModel = CalculatorViewModel()
+        let dataViewModel = CalculatorViewModel()
+        dataViewModel.pokemon = PokemonHolder.mock().pokemon
+        dataViewModel.primaryType = TypeHolder.mockType
+        
+        return Group {
+            SelectedPokemonView(viewModel: loadingViewModel)
+                .previewLayout(.fixed(width: 320, height: 320))
+            SelectedPokemonView(viewModel: dataViewModel)
+                .previewLayout(.sizeThatFits)
+        }
     }
 }
