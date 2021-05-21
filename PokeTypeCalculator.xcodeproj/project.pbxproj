@@ -96,7 +96,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CA0EB7562567714700981380 /* PokeTypeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeTypeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0EB7562567714700981380 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0EB75D2567714D00981380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0EB7602567714D00981380 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA0EB7622567714D00981380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 		CA0EB7572567714700981380 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA0EB7562567714700981380 /* PokeTypeCalculator.app */,
+				CA0EB7562567714700981380 /* Calculator.app */,
 				CA0EB7672567714D00981380 /* PokeTypeCalculatorTests.xctest */,
 				CA0EB7722567714D00981380 /* PokeTypeCalculatorUITests.xctest */,
 			);
@@ -466,7 +466,7 @@
 				FB5F016B2654AA2F00E0191F /* Kingfisher */,
 			);
 			productName = PokeTypeCalculator;
-			productReference = CA0EB7562567714700981380 /* PokeTypeCalculator.app */;
+			productReference = CA0EB7562567714700981380 /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CA0EB7662567714D00981380 /* PokeTypeCalculatorTests */ = {
@@ -812,7 +812,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brandonjenniges.PokeTypeCalculator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Calculator;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -834,7 +834,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brandonjenniges.PokeTypeCalculator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Calculator;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
