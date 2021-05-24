@@ -77,7 +77,7 @@ class CalculatorViewController: UIViewController {
     
     private func showDetailsViewController() {
         if let pokemon = self.viewModel.pokemon, let color = viewModel.primaryType.type?.color {
-            let detailsViewController = DetailsViewController(viewModel: DetailsViewModel(pokemon: pokemon, primaryColor: color))
+            let detailsViewController = DetailsViewController(viewModel: DetailsViewModel(pokemon: pokemon, primaryColor: color, secondaryColor: viewModel.secondaryType.type?.color))
             self.present(detailsViewController, animated: true, completion: nil)
         }
     }

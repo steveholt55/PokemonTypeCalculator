@@ -62,6 +62,7 @@ struct DetailView: View {
                 Text(pokemon.name.capitalized)
                     .foregroundColor(.white)
                     .font(.largeTitle)
+                    .fontWeight(.black)
                     .shadow(radius: 15)
                     .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
                 
@@ -69,7 +70,9 @@ struct DetailView: View {
             }
             .frame(maxWidth: .infinity)
             .padding()
-            .background(self.primaryColor)
+            .background(Rectangle()
+                            .fill(LinearGradient(gradient: Gradient(colors: self.viewModel.typeColors), startPoint: .leading, endPoint: .trailing))
+                            .shadow(radius: 1))
             
             List {
                 ForEach(self.sections) { section in
@@ -91,6 +94,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(viewModel: DetailsViewModel(pokemon: PokemonHolder.mock().pokemon!, primaryColor: AppColors.red))
+        DetailView(viewModel: DetailsViewModel(pokemon: PokemonHolder.mock().pokemon!, primaryColor: AppColors.red, secondaryColor: nil))
     }
 }

@@ -12,10 +12,15 @@ class DetailsViewModel: ObservableObject {
     
     let pokemon: Pokemon
     let primaryColor: Color
+    let secondaryColor: Color?
     
-    init(pokemon: Pokemon, primaryColor: Color) {
+    let typeColors: [Color]
+    
+    init(pokemon: Pokemon, primaryColor: Color, secondaryColor: Color?) {
         self.pokemon = pokemon
         self.primaryColor = primaryColor
+        self.secondaryColor = secondaryColor
+        self.typeColors = [primaryColor, secondaryColor].compactMap { $0 }
     }
     
 }
