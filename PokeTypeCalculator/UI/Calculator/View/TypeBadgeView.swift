@@ -14,7 +14,6 @@ struct TypeBadgeView: View {
     var body: some View {
         
         HStack {
-            
             Circle()
                 .frame(width: 24, height: 24)
                 .foregroundColor(type.color)
@@ -31,6 +30,7 @@ struct TypeBadgeView_Previews: PreviewProvider {
     static var previews: some View {
         let type: Type = .grass
         TypeBadgeView(type: type)
+            .previewLayout(.sizeThatFits)
     }
 }
 

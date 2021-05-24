@@ -10,8 +10,8 @@ import Combine
 
 struct SearchButton: View {
         
-    let padding: CGFloat = 12
-    let imageSize: CGFloat = 32
+    let padding: CGFloat = 20
+    let imageSize: CGFloat = 26
     let showSearchViewSubject: PassthroughSubject<Bool, Never>
     
     var body: some View {
@@ -37,6 +37,7 @@ struct SearchButton: View {
 struct SearchButton_Previews: PreviewProvider {
     static var previews: some View {
         SearchButton(showSearchViewSubject: PassthroughSubject<Bool, Never>())
+            .previewLayout(.sizeThatFits)
     }
 }
 

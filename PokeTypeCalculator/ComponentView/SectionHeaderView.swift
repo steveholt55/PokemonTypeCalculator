@@ -17,10 +17,10 @@ struct SectionHeaderView: View {
             
             Text(headerText.capitalized)
                 .foregroundColor(textColor)
-                .font(.headline)
-                .fontWeight(.bold)
+                .font(.title3)
+                .fontWeight(.black)
                 .textCase(nil)
-                .padding(.all, 8.0)
+                .padding(.horizontal, 8.0)
             
             // Make it full width
             Spacer()

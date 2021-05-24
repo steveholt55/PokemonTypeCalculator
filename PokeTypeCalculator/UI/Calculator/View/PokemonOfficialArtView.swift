@@ -19,5 +19,6 @@ struct PokemonOfficialArtView: View {
 struct PokemonOfficialArtView_Previews: PreviewProvider {
     static var previews: some View {
         PokemonOfficialArtView(imageURL: SpriteImages.mock().frontDefault!)
+            .previewLayout(.fixed(width: 300.0, height: 300.0))
     }
 }

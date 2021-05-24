@@ -19,19 +19,37 @@ struct SelectedPokemonView: View {
                     ZStack {
                         GeometryReader { reader in
                             let radius = max(reader.size.width, reader.size.height)
-                            primaryType.color
-                                .frame(width: radius, height: radius)
-                                .cornerRadius(radius / 2.0)
-                                .shadow(radius: 1)
-                                .offset(y: -radius / 2)
+                            
+                            ZStack {
+                                
+                                primaryType.color
+                                    .frame(width: radius, height: radius)
+                                    .cornerRadius(radius / 2.0)
+                                    .shadow(radius: 1)
+                                    .offset(y: -radius / 2)
+                                
+                                if let secondaryType = viewModel.secondaryType.type {
+                                    Path { path in
+                                        let width = radius
+                                        let height = radius
+                                        
+                                        path.addArc(center: CGPoint(x: height / 2, y: 0), radius: height / 2, startAngle: Angle(degrees: 90), endAngle: Angle(degrees: 270
+                                        ), clockwise: true)
+                                        
+                                        path.closeSubpath()
+                                    }
+                                    .foregroundColor(secondaryType.color)
+                                }
+                                
+                            }
                         }
                         .frame(height: 200)
                         
                         Text(selectedName.capitalized)
-                                    .foregroundColor(.white)
-                                    .font(.largeTitle)
-                                    .fontWeight(.black)
-                                    .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
+                            .foregroundColor(.white)
+                            .font(.largeTitle)
+                            .fontWeight(.black)
+                            .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
                     }
                     
                 }
