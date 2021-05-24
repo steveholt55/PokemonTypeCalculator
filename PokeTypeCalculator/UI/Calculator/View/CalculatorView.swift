@@ -23,11 +23,11 @@ struct CalculatorView: View {
             // Main View
             VStack(spacing: 0) {
                 PokemonHolderView(viewModel: self.viewModel)
-                    .padding(.top, 12.0)
+                    .padding(.vertical, 12.0)
                 
                 if self.hasData {
                     DetailsButton(viewModel: self.viewModel)
-                        .padding(.bottom, 12.0)
+                        .padding(.vertical, 12.0)
                     
                     DamageRelationView(viewModel: self.viewModel)
                         .layoutPriority(.greatestFiniteMagnitude)

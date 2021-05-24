@@ -21,6 +21,18 @@ struct PokemonHolderView: View {
                 if let officialArtImage = self.viewModel.officialArtImage {
                     PokemonOfficialArtView(imageURL: officialArtImage)
                 }
+                
+                HStack(spacing: 0) {
+                    if let primaryType = self.viewModel.primaryType.type {
+                        TypeBadgeView(type: primaryType)
+                            .padding(.horizontal, 8.0)
+                    }
+                    
+                    if let secondaryType = self.viewModel.secondaryType.type {
+                        TypeBadgeView(type: secondaryType)
+                            .padding(.horizontal, 8.0)
+                    }
+                }
         }
     }
 }
