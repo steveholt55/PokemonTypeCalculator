@@ -17,10 +17,10 @@ struct BioRowView: View {
         HStack {
             Text("\(heading.capitalized):")
                 .font(.title2)
-            
             Text(detail.capitalized)
                 .font(.title3)
         }
+        .padding(.bottom, 4)
     }
 }
 

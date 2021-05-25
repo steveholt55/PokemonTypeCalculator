@@ -15,21 +15,25 @@ struct AbilityRowView: View {
     
     var body: some View {
         
-        HStack {
-            
-            Text(ability.name.capitalized)
-                .font(.title2)
-            
-            if self.ability.isHidden {
-                Text("Hidden")
-                    .italic()
-                    .font(.footnote)
+        VStack(alignment: .center) {
+            HStack {
+                
+                Text(ability.name.capitalized)
+                    .font(.title2)
+                
+                if self.ability.isHidden {
+                    Text("Hidden")
+                        .italic()
+                        .font(.footnote)
+                }
+                
+                Spacer()
+                
+                Image(systemName: "chevron.right")
             }
-            
-            Spacer()
-            
-            Image(systemName: "chevron.right")
+            Divider()
         }
+        .padding(.bottom, 4)
         .contentShape(Rectangle())
         .onTapGesture {
             self.showingDetailView.toggle()

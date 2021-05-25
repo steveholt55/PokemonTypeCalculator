@@ -12,11 +12,16 @@ struct AbilitySectionView: View {
     @State var pokemon: Pokemon
     
     var body: some View {
-        Section(header: SectionHeaderView(headerText: "Abilities")) {
+        VStack(alignment: .leading, spacing: 4) {
+            SectionHeaderView(headerText: "Abilities")
+            Divider()
             ForEach(pokemon.abilities) { ability in
                 AbilityRowView(ability: ability)
+                    .padding(.top, 8)
+                    .padding(.leading, 8)
             }
         }
+        .padding(.bottom, 16)
     }
 }
 

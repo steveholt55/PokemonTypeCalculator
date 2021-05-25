@@ -74,19 +74,23 @@ struct DetailView: View {
                             .fill(LinearGradient(gradient: Gradient(colors: self.viewModel.typeColors), startPoint: .leading, endPoint: .trailing))
                             .shadow(radius: 1))
             
-            List {
-                ForEach(self.sections) { section in
-                    switch section {
-                    case .ability:
-                        AbilitySectionView(pokemon: pokemon)
-                    case .bio:
-                        BioSectionView(bio: pokemon.bioInfo)
-                    case .form:
-                        FormSectionView(pokemon: pokemon)
-                    case .stat:
-                        StatSectionView(pokemon: pokemon, primaryColor: self.primaryColor)
+            ScrollView {
+                VStack {
+                    ForEach(self.sections) { section in
+                        switch section {
+                        case .ability:
+                            AbilitySectionView(pokemon: pokemon)
+                        case .bio:
+                            BioSectionView(bio: pokemon.bioInfo)
+                        case .form:
+                            FormSectionView(pokemon: pokemon)
+                        case .stat:
+                            StatSectionView(pokemon: pokemon, primaryColor: self.primaryColor)
+                        }
                     }
                 }
+                .padding(.top, 16)
+                .padding(.trailing)
             }
         }
     }

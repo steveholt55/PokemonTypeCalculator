@@ -26,16 +26,23 @@ struct StatRowView: View {
             
             Text("\(stat.name.rawValue.capitalized):")
                 .font(.title2)
+                .lineLimit(1)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 8)
             
             GeometryReader { metrics in
                 ZStack(alignment: Alignment(horizontal: .leading, vertical: .center), content: {
                     
                     Color(UIColor.secondarySystemBackground)
                         .frame(minWidth: 0, maxWidth: .infinity)
-                        .border(Color(UIColor.secondarySystemBackground), width: 1)
+                        .padding()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color(UIColor.secondarySystemBackground), lineWidth: 2)
+                        )
                         
                     self.primaryColor.frame(width: metrics.size.width * self.statPercentValue, alignment: .trailing)
+                        .cornerRadius(12)
                 })
             }
             
