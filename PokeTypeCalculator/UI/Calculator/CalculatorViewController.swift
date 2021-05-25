@@ -40,6 +40,10 @@ class CalculatorViewController: UIViewController {
         self.add(hostingController, parentView: self.view)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - Combine
     
     private func setupObservables() {
