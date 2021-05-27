@@ -49,7 +49,6 @@
 		FB70C44925AAA0AE004A654E /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70C44225AAA0AE004A654E /* SearchButton.swift */; };
 		FB98974326438EE6004DADEE /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98974226438EE6004DADEE /* SearchListViewController.swift */; };
 		FB98974626438F37004DADEE /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98974526438F37004DADEE /* UIViewController+Child.swift */; };
-		FB98974826438F62004DADEE /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98974726438F62004DADEE /* UIColor+Hex.swift */; };
 		FBAD418125BBC4A90062CD00 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD418025BBC4A90062CD00 /* Language.swift */; };
 		FBAD418E25BD3A6E0062CD00 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD418D25BD3A6E0062CD00 /* AppColors.swift */; };
 		FBAD419325BE88800062CD00 /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD419225BE88800062CD00 /* Generation.swift */; };
@@ -143,7 +142,6 @@
 		FB70C44225AAA0AE004A654E /* SearchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		FB98974226438EE6004DADEE /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
 		FB98974526438F37004DADEE /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
-		FB98974726438F62004DADEE /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		FBAD418025BBC4A90062CD00 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		FBAD418D25BD3A6E0062CD00 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		FBAD419225BE88800062CD00 /* Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generation.swift; sourceTree = "<group>"; };
@@ -369,7 +367,6 @@
 		FB98974426438F2A004DADEE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				FB98974726438F62004DADEE /* UIColor+Hex.swift */,
 				FB98974526438F37004DADEE /* UIViewController+Child.swift */,
 			);
 			path = Extension;
@@ -593,7 +590,6 @@
 				FBAD41AB25BFC37D0062CD00 /* AbilityDetailsViewModel.swift in Sources */,
 				CAA8E92B256AFCD500A4F7C1 /* PokemonAPI.swift in Sources */,
 				FB5F01722655EFD800E0191F /* DetailsViewController.swift in Sources */,
-				FB98974826438F62004DADEE /* UIColor+Hex.swift in Sources */,
 				FB70C43725AAA0A6004A654E /* SearchItemRow.swift in Sources */,
 				FB70C44925AAA0AE004A654E /* SearchButton.swift in Sources */,
 				FB5F016126549DA000E0191F /* AppDelegate.swift in Sources */,
