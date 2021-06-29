@@ -16,7 +16,7 @@ struct DetailsButton: View {
     var body: some View {
         
         Button(action: {
-            self.viewModel.showDetailsSubject.send(true)
+            self.viewModel.showDetailsSubject.send()
         }) {
             Text("View Details")
                 .foregroundColor(.white)

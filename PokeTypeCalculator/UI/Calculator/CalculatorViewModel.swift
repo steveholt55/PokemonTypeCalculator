@@ -13,8 +13,8 @@ class CalculatorViewModel: ObservableObject {
     @ObservedObject var primaryType: TypeHolder = TypeHolder()
     @ObservedObject var secondaryType: TypeHolder = TypeHolder()
     
-    let showSearchViewSubject = PassthroughSubject<Bool, Never>()
-    let showDetailsSubject = PassthroughSubject<Bool, Never>()
+    let showSearchViewSubject = PassthroughSubject<Void, Never>()
+    let showDetailsSubject = PassthroughSubject<Void, Never>()
     
     var cancellationToken: AnyCancellable?
     

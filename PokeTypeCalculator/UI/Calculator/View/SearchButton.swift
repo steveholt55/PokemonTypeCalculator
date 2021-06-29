@@ -12,12 +12,12 @@ struct SearchButton: View {
         
     let padding: CGFloat = 20
     let imageSize: CGFloat = 26
-    let showSearchViewSubject: PassthroughSubject<Bool, Never>
+    let showSearchViewSubject: PassthroughSubject<Void, Never>
     
     var body: some View {
         
         Button(action: {
-            self.showSearchViewSubject.send(true)
+            self.showSearchViewSubject.send()
         }) {
             Image(systemName:  "magnifyingglass")
                 .resizable()
@@ -36,7 +36,7 @@ struct SearchButton: View {
 
 struct SearchButton_Previews: PreviewProvider {
     static var previews: some View {
-        SearchButton(showSearchViewSubject: PassthroughSubject<Bool, Never>())
+        SearchButton(showSearchViewSubject: PassthroughSubject<Void, Never>())
             .previewLayout(.sizeThatFits)
     }
 }
