@@ -25,7 +25,7 @@ struct DetailsButton: View {
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)
         }
-        .background(AppColors.red)
+        .background(Color.primaryRed)
         .cornerRadius(8)
         
     }

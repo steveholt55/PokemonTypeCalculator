@@ -10,7 +10,7 @@ import SwiftUI
 struct StatRowView: View {
     
     let stat: Stat
-    @State var primaryColor: Color = AppColors.red
+    @State var primaryColor: Color = .primaryRed
     
     var statPercentValue: CGFloat {
         CGFloat(stat.baseStat) / CGFloat(stat.name.maxValue())

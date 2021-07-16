@@ -5,11 +5,10 @@
 //  Created by Brandon Jenniges on 1/23/21.
 //
 
-import Foundation
 import UIKit
 import SwiftUI
 
-struct AppColors {
+extension Color {
     
-    static let red = Color(UIColor(named: "AppRed")!)
+    static let primaryRed = Color(UIColor(named: "AppRed")!)
 }

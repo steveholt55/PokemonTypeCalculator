@@ -10,7 +10,7 @@ import SwiftUI
 struct StatSectionView: View {
     
     @State var pokemon: Pokemon
-    @State var primaryColor: Color = AppColors.red
+    @State var primaryColor: Color = .primaryRed
     
     var body: some View {
         Section(header: SectionHeaderView(headerText: "Stats")) {

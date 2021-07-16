@@ -98,6 +98,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(viewModel: DetailsViewModel(pokemon: PokemonHolder.mock().pokemon!, primaryColor: AppColors.red, secondaryColor: nil))
+        DetailView(viewModel: DetailsViewModel(pokemon: PokemonHolder.mock().pokemon!, primaryColor: .primaryRed, secondaryColor: nil))
     }
 }
